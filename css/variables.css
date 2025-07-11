@@ -1,0 +1,24 @@
+/*------------------------------------*\
+
+$CUSTOM PROPERTIES
+
+\*------------------------------------*/
+
+:root{
+    --height-header-size: 96px;
+
+    /* Colors */
+    --primary-color: #FFF9F0;
+    --secondary-color: #1F1100;
+    --accent-color: #DBD2C7;
+}
+
+/*------------------------------------*\
+
+$TEXT STYLES
+
+\*------------------------------------*/
+
+body {
+     font-family: "Inter Tight", sans-serif;
+}
