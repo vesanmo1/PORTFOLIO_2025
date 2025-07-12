@@ -5,12 +5,16 @@ $CUSTOM PROPERTIES
 \*------------------------------------*/
 
 :root{
-    --height-header-size: 96px;
+
+    /* Sizes */
+    --height-header-size: 128px;
+    --outside-header-padding: 24px 60px;
+    --inside-header-padding: 16px;
 
     /* Colors */
     --primary-color: #FFF9F0;
     --secondary-color: #1F1100;
-    --accent-color: #DBD2C7;
+    --accent-color: #CDB996;
 }
 
 /*------------------------------------*\

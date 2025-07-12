@@ -1,0 +1,58 @@
+/*------------------------------------*\
+
+$RESET
+
+\*------------------------------------*/
+
+:root{
+       scroll-behavior: smooth;
+        font-size:100%;
+}
+*{
+    margin:0;
+    padding:0;
+    border: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    display: block;
+    color:inherit;
+    text-decoration: none;
+}
+p a{
+    display: inline;
+}
+h1 , h2 , h3 , h4 , h5 , h6 , strong , em , mark, pre, code{
+    font:inherit;
+}
+mark{
+    background-color:transparent;
+}
+picture , img, video , iframe {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: initial;
+}
+svg{
+    display: block;
+    width: initial;
+    height: initial;
+    fill: currentColor;
+}
+
+
+form , input , select , option , textarea , label , fieldset , legend , button{
+    display: block;
+    font:inherit;
+    background-color: initial;
+}
+fieldset {
+    border : none ;
+}
+button , label{
+    cursor: pointer;
+}

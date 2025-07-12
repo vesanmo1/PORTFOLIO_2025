@@ -1,85 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vero - UX/UI Designer & Front-end Developer</title>
 
-    <!--Inserción de la tipografía Nunito Sans-->
+    <!--Inserción de la tipografía Inter Tight-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
+    <!--Inserción de los archivos CSS-->
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/index.css">
 
+    <!--Inserción de los archivos JS-->
+    <script src="js/index.js" defer></script>
+
 </head>
+
 <body>
-    <header class="header">
-
-        <div class="header__container">
-
-            <div class="header__logo-container">    
-                <svg class="header__logo">
-                    <use href="/assets/logo.svg#svg__logo" />
-                </svg>       
+    <div class="header__wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo-container">    
+                    <svg class="header__logo">
+                        <use href="/assets/svg/interaction/logo.svg#logo"/>
+                    </svg>       
+                </div>
+                <button class="header__btn">
+                    <a href="">¿Hablamos?</a>
+                </button>
             </div>
-
-            <button class="header__btn">
-                <a href="">¿Hablamos?</a>
-            </button>
-
-        </div>
-
-        <div class="header__nav-container">
-            <nav class="header__nav">
-                <ul>
-                    <li><a href="/" class="nav__item">¡Hola!</a></li>
-                    <li><a href="/" class="nav__item">Mis proyectos</a></li>
-                    <li><a href="/" class="nav__item">Qué hago</a></li>
-                </ul>
-            </nav>
-        </div>
-     
-    </header>
+            <div class="header-nav">
+                <div class="header-nav__wrapper">
+                    <div class="header-nav__container">
+                        <nav class="header-nav__nav">
+                            <ul class="header-nav__list">
+                                <li class="header-nav__item active">¡Hola!</li>
+                                <li class="header-nav__item">Mis Proyectos</li>
+                                <li class="header-nav__item">Qué hago</li>
+                            </ul>
+                            <div class="header-nav__indicator"></div>
+                        </nav>
+                    </div>  
+                </div> 
+            </div>     
+        </header>
+    </div>
     <main class="main">
         <section class="hello">
-
-            <div>
-                <p>¡Hola! Soy Vero,</p>
+            <div class="hello__intro">
+                <p class="hello__greeting">¡Hola! Soy Vero,</p>
             </div>
-
-            <h1>Diseño y construyo lo que tú imaginas.</h1>
-
+            <h1 class="hello__title">Diseño y construyo lo que tú imaginas.</h1>
         </section>
-
         <div class="section-divider">
-
             <div class="section-divider__folder-closure-container">
-                <img src="/assets/folder-closure_Mesa de trabajo 1.svg" alt="Imagen de un cierre de carpeta. Elemento decorativo de la web.">
+                <img src="/assets/svg/folder-closure.svg" alt="Imagen de un cierre de carpeta. Elemento decorativo de la web.">
             </div>
-
             <img src="" alt="" class="img">
-        </div>
-                        
-
+        </div>                        
         <section class="projects">
             <h2>Mis proyectos</h2>
             <section class="project1"></section>
             <section class="project2"></section>
             <section class="project3"></section>
         </section>
-
         <section class="What-I-do">
             <section class="imagine"></section>
             <section class="design"></section>
             <section class="develop"></section>
         </section>
-
         <footer></footer>
-
-
     </main>
     <footer>
         <p>© 2025 Mi Sitio Web. Todos los derechos reservados.</p>
