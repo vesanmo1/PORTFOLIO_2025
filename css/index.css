@@ -1,12 +1,25 @@
 /*------------------------------------*\
 
-$BODY
+$BODY & SHARED STYLES
 
 \*------------------------------------*/
 
 body {
     background-color: var(--primary-color);
 }
+
+.section__title {
+    color: var(--secondary-color);
+
+}
+
+.title__horizontal-line {
+    background-color: var(--accent-color);
+    width: 100%;
+    height: 4px;
+}
+
+
 
 /*------------------------------------*\
 
@@ -20,13 +33,15 @@ $HEADER
     padding: var(--outside-header-padding);
     position: fixed;
     z-index: 10; /*para que se posicione por debajo del header-nav__wrapper */
+    
 }
 
     .header {
         width: 100%;
         height: 100%;
         background-color: var(--accent-color);
-        border-radius: 100px;
+        border-radius: var(--pill-style-edge);
+        
     }
 
         .header__container {
@@ -56,8 +71,8 @@ $HEADER
             .header__btn {
                 height: 100%;
                 min-width: 8%;
-                padding: 0 24px;
-                border-radius: 100px;
+                padding: 0 1.5rem;
+                border-radius: var(--pill-style-edge);
                 background-color: var(--primary-color);
             }
 
@@ -107,7 +122,7 @@ $HEADER
                         align-items: center;
 
                         background: var(--primary-color);
-                        border-radius: 100px;
+                        border-radius: var(--pill-style-edge);
                         width: 100%;
                         height: 100%;
                         padding: 0;
@@ -132,18 +147,18 @@ $HEADER
                             font-weight: 700;
                             }
 
-
+                        /*indicador del menú de navegación*/
                         .header-nav__indicator {
-                            position: absolute;
-                            top: 50%; 
-                            left: 8px;
-                            transform: translateY(-50%);
+                            position: absolute; 
+                            top: 50%; /* el borde superior del indicador se alinea con el centro del menú */
+                            left: 8px; 
+                            transform: translateY(-50%); /* el eje central del indicador se alinea con el centro del menú */
 
-                            width: calc(100% / 3 - 1rem);
-                            height: calc(100% - 12px);
+                            width: calc(100% / 3 - 16px); /* 100% dividido por el número de elementos del menú menos el padding */
+                            height: calc(100% - 12px); /* 100% de la altura del menú menos el padding */
 
                             background: var(--secondary-color);
-                            border-radius: 100px;
+                            border-radius: var(--pill-style-edge);
                             transition: left 0.3s;
                             z-index: 0; /*para que se posicione por debajo de los items del menú */
 
@@ -155,7 +170,7 @@ $SECTION HELLO
 
 \*------------------------------------*/
 
-.hello {
+.section__hello {
 
     width: 100%;
     height: 100vh;
@@ -166,12 +181,14 @@ $SECTION HELLO
     justify-content: start;
     align-items: center;
 
-    border-radius: 0 0 96px 96px; 
+    border-radius: 0 0 var(--big-border-radius) var(--big-border-radius); 
+    box-shadow: 12px 12px 6px lightgray;
 
-    background-image: url('../assets/images/paper-texture.jpg'); /* ruta a la imagen */
-    background-size: cover;       /* para que la imagen cubra todo el bloque */
-    background-position: center;  /* para centrar la imagen */
-    background-repeat: no-repeat; /* para que no se repita */
+    background-image: url('../assets/images/paper-texture.jpg'); 
+    background-size: cover;      
+    background-position: center;  
+    background-repeat: no-repeat; 
+
 }
 
     .hello__intro {
@@ -187,7 +204,6 @@ $SECTION HELLO
  
         .hello__title {
             font-size: clamp(3rem, 6vw, 9rem);
-            font-weight: 900;
             line-height: 1.1;
             color: var(--accent-color);
             text-align: center;
@@ -196,48 +212,142 @@ $SECTION HELLO
 
 /*------------------------------------*\
 
-$SECTION HELLO
+$SECTION DIVIDER
 
 \*------------------------------------*/
 
 .section-divider {
-width: 100%;
-height: 100vh;
-}
-
-.section-divider__folder-closure-container {
-max-width: 10%;
-height: auto;
-
-
-position: relative;
-top: 0;
-left: 50%;
-transform: translate(-50%, -50%);
-
-}
-
-.projects {
-display: flex;
-flex-direction: column;
-}
-
-.project1 {
     width: 100%;
-    height: 60vh;
-    background-color: lightgreen;
+    height: auto;
+    padding-bottom: var(--sections-spacing);
 }
 
-.project2 {
+    .section-divider__folder-closure-container {
+        max-width: 10%;
+        height: auto;
+        position: relative;
+        top: 0;
+        left: 50%; /* el borde izquierdo del container se alinea con el eje vertical de la web */
+        transform: translate(-50%, -50%); /*el container se mueve el 50% de su anchura a la izquierda y el 50% de su altura hacia arriba*/
+    }
+
+    .section-divider__img-wrapper {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+    }
+
+        .section-divider__img-container {
+            width: 50%;
+            height: auto;
+        }
+
+/*------------------------------------*\
+
+$SECTION PROJECTS
+
+\*------------------------------------*/
+
+.section__projects {
     width: 100%;
-    height: 60vh;
-    background-color: lightskyblue;
+    height: auto;
+    padding: 0 var(--sides-general-padding);
 }
 
-.project3 {
+    .projects__container {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+
+        padding: 60px 0;
+    }
+
+        .project {
+            width: 100%;
+            height: 75vh;
+            border-radius: var(--big-border-radius);
+            padding: 50px;
+
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+
+            color: var(--primary-color) /*para que el texto de todos sus hijos sea de este color*/
+
+        }
+
+        .project > * {
+            height: 100%;
+            flex: 1;
+        }
+
+        .project:nth-child(even) {
+            flex-flow: row-reverse wrap;
+        }
+
+        .project1 {
+            background-color: #173F35;
+        }
+
+        .project2 {
+            background-color: var(--amaranto-color-project2);
+        }
+
+        .project3 {
+            background-color: var(--red-color-project3);
+        }
+
+            .project__image {
+                background-color: #616161;
+                border-radius: var(--medium-border-radius);
+            }
+            .project__content {
+
+            }
+
+                .project__skills-labels {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    gap: 12px;
+                }
+
+                    .label {
+                        padding: 12px 32px;
+                        border-radius: var(--pill-style-edge);
+                        background-color: var(--bg-color-labels);
+                    }
+                    
+                .project__title {
+                    font-size: 1.75rem;
+                    padding-top: var(--big-padding);                    
+                }
+
+                .project__description {                    
+                    text-transform: uppercase;
+                    padding: var(--small-padding) 0 var(--big-padding) 0;
+                }
+
+/*------------------------------------*\
+
+$SECTION WHAT I DO
+
+\*------------------------------------*/
+
+.section__what-I-do {
     width: 100%;
-    height: 60vh;
-    background-color: slateblue;
+    height: auto;
+    padding: 0 var(--sides-general-padding);
 }
+
 
 

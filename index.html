@@ -14,7 +14,7 @@
     
     <!--Inserción de los archivos CSS-->
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/globals.css">
     <link rel="stylesheet" href="css/index.css">
 
     <!--Inserción de los archivos JS-->
@@ -52,7 +52,7 @@
         </header>
     </div>
     <main class="main">
-        <section class="hello">
+        <section class="section__hello">
             <div class="hello__intro">
                 <p class="hello__greeting">¡Hola! Soy Vero,</p>
             </div>
@@ -62,15 +62,91 @@
             <div class="section-divider__folder-closure-container">
                 <img src="/assets/svg/folder-closure.svg" alt="Imagen de un cierre de carpeta. Elemento decorativo de la web.">
             </div>
-            <img src="" alt="" class="img">
+            <div class="section-divider__img-wrapper">
+                <div class="section-divider__img-container">
+                    <img src="/assets/svg/skills.svg" alt="" class="section-divider__img">
+                </div>
+            </div>
         </div>                        
-        <section class="projects">
-            <h2>Mis proyectos</h2>
-            <section class="project1"></section>
-            <section class="project2"></section>
-            <section class="project3"></section>
+        <section class="section__projects">
+            <h2 class="section__title">Echa un vistazo a mis últimos proyectos.</h2>
+            <div class="title__horizontal-line"></div>
+            <div class="projects__container">
+                <section class="project project1">
+                    <div class="project__image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="project__content">
+                        <div class="project__skills-labels">
+                            <div class="label">
+                                <p class="skill">Photoshop</p>
+                            </div>
+                            <div class="label">
+                                <p class="skill">Illustrator</p>
+                            </div>
+                            <div class="label">
+                                <p class="skill">Branding</p>
+                            </div>
+                        </div>
+                        <p class="project__title">Paula Perelló Podología</p>                        
+                        <h3 class="project__description">Diseño de identidad visual y piezas gráficas para una clínica podológica.</h3>
+                        <button class="general__btn">
+                            <a href="">Ver proyecto</a>
+                        </button>
+                    </div>
+                </section>
+                <section class="project project2">
+                    <div class="project__image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="project__content">
+                        <div class="project__skills-labels">
+                            <div class="label">
+                                <p class="skill">Photoshop</p>
+                            </div>
+                            <div class="label">
+                                <p class="skill">Illustrator</p>
+                            </div>
+                            <div class="label">
+                                <p class="skill">Branding</p>
+                            </div>
+                        </div>
+                        <p class="project__title">The Cookie Jar</p>
+                        <h3 class="project__description">Diseño y desarrollo de una plantilla personalizada de Wordpress.</h3>
+                        <button class="general__btn">
+                            <a href="">Ver proyecto</a>
+                        </button>
+                    </div>
+                </section>
+                
+                <section class="project project3">
+                     <div class="project__image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="project__content">
+                        <div class="project__skills-labels">
+                            <div class="label">
+                                <p class="skill">Photoshop</p>
+                            </div>
+                            <div class="label">
+                                <p class="skill">Illustrator</p>
+                            </div>
+                            <div class="label">
+                                <p class="skill">Branding</p>
+                            </div>
+                        </div>
+                        <p class="project__title">Taurino Digital Agency</p>
+                        <h3 class="project__description">Creación de identidad visual y diseño de interfaz en Figma para empresa de servicios digitales.</h3>
+                        <button class="general__btn">
+                            <a href="">Ver proyecto</a>
+                        </button>
+                    </div>
+                </section>
+            </div>
         </section>
-        <section class="What-I-do">
+        <section class="section__what-I-do">
+            <h2 class="section__title">Déjame mostrarte qué hago.</h2>
+            <div class="title__horizontal-line"></div>
             <section class="imagine"></section>
             <section class="design"></section>
             <section class="develop"></section>
