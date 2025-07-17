@@ -5,12 +5,8 @@ $BODY & SHARED STYLES
 \*------------------------------------*/
 
 body {
-    background-color: var(--primary-color);
-}
-
-.section__title {
-    color: var(--secondary-color);
-
+    background-color: var(--primary-color); /*por defecto la web tiene este color de fondo*/
+    color: var(--secondary-color); /*por defecto la web tiene este color de texto*/
 }
 
 .title__line {
@@ -18,8 +14,6 @@ body {
     width: 100%;
     height: 4px;
 }
-
-
 
 /*------------------------------------*\
 
@@ -134,8 +128,7 @@ $HEADER
                             .header-nav__item {
                             flex: 1;
                             text-align: center;
-                            cursor: pointer;
-                            color: var(--secondary-color);
+                            cursor: pointer;                            
                             font-weight: 400;
                             position: relative;
                             z-index: 1; /*para que se posicione por encima del header-nav__indicator*/
@@ -219,7 +212,6 @@ $DIVIDER
 .section-divider {
     width: 100%;
     height: auto;
-    padding-bottom: var(--sections-spacing);
 }
 
     .section-divider__folder-closure-container {
@@ -255,7 +247,7 @@ $SECTION PROJECTS
 .section__projects {
     width: 100%;
     height: auto;
-    padding: 0 var(--sides-general-padding) var(--sections-spacing) var(--sides-general-padding);;
+    padding: var(--big-sections-spacing) var(--sides-general-padding) 0 var(--sides-general-padding);
 }
 
     .projects__container {
@@ -318,7 +310,7 @@ $SECTION PROJECTS
 
                 .project__skills-labels {
                     display: flex;
-                    flex-wrap: nowrap;
+                    flex-wrap: wrap;
                     gap: 12px;
                 }
 
@@ -340,15 +332,60 @@ $SECTION PROJECTS
 
 /*------------------------------------*\
 
-$SECTION WHAT I DO
+$SECTION EXPERTISE
 
 \*------------------------------------*/
 
-.section__what-I-do {
+.section__expertise {
     width: 100%;
     height: auto;
-    padding: 0 var(--sides-general-padding);
+    padding: var(--big-sections-spacing) var(--sides-general-padding) 0 var(--sides-general-padding);
+    
 }
 
+    .expertise__container {
+        width: 100%;
+        height: 100%;
+        padding: var(--small-sections-spacing) var(--sides-section-padding) 0 var(--sides-section-padding);
+        
+        display: grid;
+        grid-template-areas:
+            "imagine    .       ."
+            "imagine    design  ."
+            "imagine    design  develop"
+            ".          design  develop"
+            ".          .       develop";
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
 
+        .expertise__area--imagine {grid-area: imagine;}
+        .expertise__area--design {grid-area: design;}
+        .expertise__area--develop {grid-area: develop;}
+
+            .expertise__img-container {
+                padding-bottom: var(--medium-padding);
+            }
+
+                .expertise__img {
+                    width: 100%;
+                    max-height: 50vh;
+                    object-fit: contain;
+                    object-position: left top;
+                }
+
+            .expertise__title {
+                padding-bottom: var(--small-padding);
+            }
+            
+
+/*------------------------------------*\
+
+$FOOTER
+
+\*------------------------------------*/
+
+footer {
+   padding: var(--big-sections-spacing) var(--sides-general-padding) 0 var(--sides-general-padding); 
+}
 

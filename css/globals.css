@@ -9,11 +9,13 @@ $CUSTOM PROPERTIES
     /*----------SIZES----------*/
 
     /*Global*/
-    --sides-general-padding: 3.75rem;
-    --big-border-radius: 6rem;
-    --medium-border-radius: 2.875rem;
-    --sections-spacing: clamp(3rem, 8vw, 13rem);
-    --pill-style-edge: 10rem;
+    --sides-general-padding: clamp(1.5rem, 3vw, 7rem); /*padding lateral general de la web*/
+    --sides-section-padding: clamp(4rem, 8vw, 12rem); /*padding adicional del contenido dentro de una sección*/
+    --big-border-radius: 6rem; /*bordes redondeados para secciones de la web*/
+    --medium-border-radius: 2.875rem; /*bordes redondeados para secciones de la web dentro de otra sección con los bordes redondeados más grandes*/
+    --big-sections-spacing: clamp(3rem, 8vw, 13rem); /*separación grande entre secciones*/
+    --small-sections-spacing: clamp(1.5rem, 6vw, 3.75rem); /*separación pequeña entre el título y el inicio de una sección*/
+    --pill-style-edge: 10rem; /*bordes totalmente redondeados para hacer un efecto píldora en elementos como etiquetas o botones*/
 
 
     /*Text paddings*/
@@ -81,7 +83,8 @@ h2 {
     text-transform: uppercase;
 }
 
-h3 {
+h3,
+h4 {
     font-size: clamp(1.5rem, 2.5vw, 4rem);
     font-weight: 700;
 }
