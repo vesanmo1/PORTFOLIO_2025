@@ -12,7 +12,7 @@ $CUSTOM PROPERTIES
     --sides-general-padding: 3.75rem;
     --big-border-radius: 6rem;
     --medium-border-radius: 2.875rem;
-    --sections-spacing: 15rem;
+    --sections-spacing: clamp(3rem, 8vw, 13rem);
     --pill-style-edge: 10rem;
 
 

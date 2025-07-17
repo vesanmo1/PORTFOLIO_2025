@@ -23,6 +23,7 @@
 </head>
 
 <body>
+    <!--HEADER-->
     <div class="header__wrapper">
         <header class="header">
             <div class="header__container">
@@ -52,27 +53,31 @@
         </header>
     </div>
     <main class="main">
+        <!--SECTION HELLO-->
         <section class="section__hello">
             <div class="hello__intro">
                 <p class="hello__greeting">¡Hola! Soy Vero,</p>
             </div>
             <h1 class="hello__title">Diseño y construyo lo que tú imaginas.</h1>
         </section>
+        <!--DIVIDER-->
         <div class="section-divider">
             <div class="section-divider__folder-closure-container">
                 <img src="/assets/svg/folder-closure.svg" alt="Imagen de un cierre de carpeta. Elemento decorativo de la web.">
-            </div>
+            </div>            
             <div class="section-divider__img-wrapper">
                 <div class="section-divider__img-container">
-                    <img src="/assets/svg/skills.svg" alt="" class="section-divider__img">
+                    <img src="" alt="" class="section-divider__img">
                 </div>
             </div>
-        </div>                        
+        </div>
+        <!--SECTION PROJECTS-->                        
         <section class="section__projects">
             <h2 class="section__title">Echa un vistazo a mis últimos proyectos.</h2>
-            <div class="title__horizontal-line"></div>
+            <div class="title__line"></div>
             <div class="projects__container">
-                <section class="project project1">
+                <!--Project 1-->
+                <section class="section__project  section__project--project1">
                     <div class="project__image">
                         <img src="" alt="">
                     </div>
@@ -95,20 +100,24 @@
                         </button>
                     </div>
                 </section>
-                <section class="project project2">
+                <!--Project 2-->
+                <section class="section__project  section__project--project2">
                     <div class="project__image">
                         <img src="" alt="">
                     </div>
                     <div class="project__content">
                         <div class="project__skills-labels">
                             <div class="label">
-                                <p class="skill">Photoshop</p>
-                            </div>
-                            <div class="label">
                                 <p class="skill">Illustrator</p>
                             </div>
                             <div class="label">
-                                <p class="skill">Branding</p>
+                                <p class="skill">Figma</p>
+                            </div>
+                            <div class="label">
+                                <p class="skill">Wordpress</p>
+                            </div>
+                            <div class="label">
+                                <p class="skill">Visual Studio Code</p>
                             </div>
                         </div>
                         <p class="project__title">The Cookie Jar</p>
@@ -118,8 +127,8 @@
                         </button>
                     </div>
                 </section>
-                
-                <section class="project project3">
+                <!--Project 3-->
+                <section class="section__project  section__project--project3">
                      <div class="project__image">
                         <img src="" alt="">
                     </div>
@@ -134,6 +143,9 @@
                             <div class="label">
                                 <p class="skill">Branding</p>
                             </div>
+                            <div class="label">
+                                <p class="skill">Figma</p>
+                            </div>
                         </div>
                         <p class="project__title">Taurino Digital Agency</p>
                         <h3 class="project__description">Creación de identidad visual y diseño de interfaz en Figma para empresa de servicios digitales.</h3>
@@ -144,12 +156,15 @@
                 </section>
             </div>
         </section>
-        <section class="section__what-I-do">
-            <h2 class="section__title">Déjame mostrarte qué hago.</h2>
-            <div class="title__horizontal-line"></div>
-            <section class="imagine"></section>
-            <section class="design"></section>
-            <section class="develop"></section>
+        <!--SECTION EXPERTISE-->  
+        <section class="section__expertise"> 
+            <h2 class="section__title">Déjame mostrarte qué hago.</h2> 
+            <div class="title__line"></div> 
+            <div class="expertise__container"> 
+                <section class="expertise__area expertise__area--imagine"></section> 
+                <section class="expertise__area expertise__area--design"></section> 
+                <section class="expertise__area expertise__area--develop"></section> 
+            </div> 
         </section>
         <footer></footer>
     </main>

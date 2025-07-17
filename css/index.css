@@ -13,7 +13,7 @@ body {
 
 }
 
-.title__horizontal-line {
+.title__line {
     background-color: var(--accent-color);
     width: 100%;
     height: 4px;
@@ -212,7 +212,7 @@ $SECTION HELLO
 
 /*------------------------------------*\
 
-$SECTION DIVIDER
+$DIVIDER
 
 \*------------------------------------*/
 
@@ -242,7 +242,8 @@ $SECTION DIVIDER
 
         .section-divider__img-container {
             width: 50%;
-            height: auto;
+            height: 600px;
+            background-color: gray;
         }
 
 /*------------------------------------*\
@@ -254,7 +255,7 @@ $SECTION PROJECTS
 .section__projects {
     width: 100%;
     height: auto;
-    padding: 0 var(--sides-general-padding);
+    padding: 0 var(--sides-general-padding) var(--sections-spacing) var(--sides-general-padding);;
 }
 
     .projects__container {
@@ -267,10 +268,10 @@ $SECTION PROJECTS
         justify-content: center;
         gap: 24px;
 
-        padding: 60px 0;
+        padding: 3.75rem 0 0 0;
     }
 
-        .project {
+        .section__project {
             width: 100%;
             height: 75vh;
             border-radius: var(--big-border-radius);
@@ -286,29 +287,29 @@ $SECTION PROJECTS
 
         }
 
-        .project > * {
+        .section__project > * {
             height: 100%;
             flex: 1;
         }
 
-        .project:nth-child(even) {
+        .section__project:nth-child(even) {
             flex-flow: row-reverse wrap;
         }
 
-        .project1 {
-            background-color: #173F35;
+        .section__project--project1 {
+            background-color: var(--brunswick-color-project1);
         }
 
-        .project2 {
+        .section__project--project2 {
             background-color: var(--amaranto-color-project2);
         }
 
-        .project3 {
+        .section__project--project3 {
             background-color: var(--red-color-project3);
         }
 
             .project__image {
-                background-color: #616161;
+                background-color: grey;
                 border-radius: var(--medium-border-radius);
             }
             .project__content {
