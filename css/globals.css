@@ -10,18 +10,18 @@ $CUSTOM PROPERTIES
 
     /*Global*/
     --sides-general-padding: clamp(1.5rem, 3vw, 7rem); /*padding lateral general de la web*/
-    --sides-section-padding: clamp(4rem, 8vw, 12rem); /*padding adicional del contenido dentro de una sección*/
-    --big-border-radius: 6rem; /*bordes redondeados para secciones de la web*/
-    --medium-border-radius: 2.875rem; /*bordes redondeados para secciones de la web dentro de otra sección con los bordes redondeados más grandes*/
+    --sides-section-padding: clamp(2rem, 6.5vw, 12rem); /*padding adicional del contenido dentro de una sección*/
+    --big-border-radius: clamp(3rem, 4.5vw, 6rem); /*bordes redondeados para secciones de la web*/
+    --medium-border-radius: clamp(1.5rem, 2.25vw, 2.875rem); /*bordes redondeados para secciones de la web dentro de otra sección con los bordes redondeados más grandes*/
     --big-sections-spacing: clamp(3rem, 8vw, 13rem); /*separación grande entre secciones*/
-    --small-sections-spacing: clamp(1.5rem, 6vw, 3.75rem); /*separación pequeña entre el título y el inicio de una sección*/
+    --small-sections-spacing: 3.75rem; /*separación pequeña entre el título y el inicio de una sección*/
     --pill-style-edge: 10rem; /*bordes totalmente redondeados para hacer un efecto píldora en elementos como etiquetas o botones*/
 
 
     /*Text paddings*/
-    --big-padding: 3.5rem;  
-    --medium-padding: 2rem; 
-    --small-padding: 1rem;
+    --big-padding: clamp(1.5rem, 2.5vw, 3.5rem);  
+    --medium-padding: clamp(1rem, 1.5vw, 2rem);
+    --small-padding: clamp(0.75rem, 0.875vw, 1rem);
 
     /*Header*/
     --height-header-size: 8rem;
@@ -89,6 +89,8 @@ h4 {
     font-weight: 700;
 }
 
+
+
 /*------------------------------------*\
 
 $BUTTONS
@@ -96,12 +98,42 @@ $BUTTONS
 \*------------------------------------*/
 
 .general__btn {
+    width: fit-content;
     padding: 1rem 4rem;    
     border-radius: 10rem;
-    font-weight: 500;
-    font-size: clamp(0.75rem, 1vw, 1.5rem);
+    font-weight: 700;
+    font-size: clamp(0.875rem, 1vw, 1.5rem);
+
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 
     background-color: var(--primary-color);
     color: var(--secondary-color);
     cursor: pointer;
+
+    transition: gap 0.2s;
 }
+
+.general__btn:hover{
+    gap: 2rem;
+}
+
+.general__btn:focus-within{
+    gap: 2rem;
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0.75rem 0.75rem 0 var(--bg-color-labels);
+}
+
+    .btn__link:focus {
+        outline: none;
+        box-shadow: none;
+        text-decoration: underline;
+    }
+    
+    .arrow {
+        width: 1em;
+        height: auto;
+    }

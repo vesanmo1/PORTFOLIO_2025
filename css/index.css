@@ -145,11 +145,11 @@ $HEADER
                         .header-nav__indicator {
                             position: absolute; 
                             top: 50%; /* el borde superior del indicador se alinea con el centro del menú */
-                            left: 8px; 
+                            left: 0.5rem; 
                             transform: translateY(-50%); /* el eje central del indicador se alinea con el centro del menú */
 
-                            width: calc(100% / 3 - 16px); /* 100% dividido por el número de elementos del menú menos el padding */
-                            height: calc(100% - 12px); /* 100% de la altura del menú menos el padding */
+                            width: calc(100% / 3 - 1rem); /* 100% dividido por el número de elementos del menú menos el padding */
+                            height: calc(100% - 0.75rem); /* 100% de la altura del menú menos el padding */
 
                             background: var(--secondary-color);
                             border-radius: var(--pill-style-edge);
@@ -168,7 +168,7 @@ $SECTION HELLO
 
     width: 100%;
     height: 100vh;
-    padding: calc(var(--height-header-size) + 96px) 200px 0 200px;
+    padding: calc(var(--height-header-size) + var(--small-sections-spacing)) var(--sides-section-padding) 0 var(--sides-section-padding);
 
     display: flex;
     flex-direction: column;
@@ -176,7 +176,7 @@ $SECTION HELLO
     align-items: center;
 
     border-radius: 0 0 var(--big-border-radius) var(--big-border-radius); 
-    box-shadow: 12px 12px 6px lightgray;
+    box-shadow: 0.75rem 0.75rem 0 var(--bg-color-labels);
 
     background-image: url('../assets/images/paper-texture.jpg'); 
     background-size: cover;      
@@ -186,18 +186,18 @@ $SECTION HELLO
 }
 
     .hello__intro {
-        padding-bottom: 24px;
+        padding-bottom: 1.5rem;
         color: var(--primary-color);
     }
 
         .hello__greeting {
-        font-size: 3rem;
+        font-size: clamp(2rem, 2.5vw, 3rem);
         font-weight: 300;
         text-align: center;
         }
  
         .hello__title {
-            font-size: clamp(3rem, 6vw, 9rem);
+            font-size: clamp(3.5rem, 7vw, 8rem);
             line-height: 1.1;
             color: var(--accent-color);
             text-align: center;
@@ -216,7 +216,8 @@ $DIVIDER
 }
 
     .section-divider__folder-closure-container {
-        max-width: 10%;
+        width: 10%;
+        max-width: 180px;
         height: auto;
         position: relative;
         top: 0;
@@ -259,34 +260,33 @@ $SECTION PROJECTS
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 24px;
+        gap: 1.5rem;
 
         padding: 3.75rem 0 0 0;
     }
 
         .section__project {
             width: 100%;
-            height: 75vh;
+            min-height: 75vh;
             border-radius: var(--big-border-radius);
             padding: 50px;
 
             display: flex;
-            flex-flow: row wrap;
+            flex-direction: row;
             justify-content: center;
-            align-items: center;
+            align-items: stretch; 
             gap: 50px;
 
             color: var(--primary-color) /*para que el texto de todos sus hijos sea de este color*/
 
         }
 
-        .section__project > * {
-            height: 100%;
-            flex: 1;
+        .section__project > * { /*seleccionamos todos los hijos directos de .section__project*/
+            flex: 1; /*hace que los dos hijos ocupen el mismo ancho*/
         }
 
         .section__project:nth-child(even) {
-            flex-flow: row-reverse wrap;
+            flex-direction: row-reverse; /*invertimos el orden de los elementos en fila de los hijos impares de .section__project*/
         }
 
         .section__project--project1 {
@@ -302,27 +302,24 @@ $SECTION PROJECTS
         }
 
             .project__image {
+                min-height: 400px; 
                 background-color: grey;
                 border-radius: var(--medium-border-radius);
-            }
-            .project__content {
-
             }
 
                 .project__skills-labels {
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 12px;
+                    gap: 0.75rem;
                 }
 
                     .label {
-                        padding: 12px 32px;
+                        padding: 0.75rem 2rem;
                         border-radius: var(--pill-style-edge);
                         background-color: var(--bg-color-labels);
                     }
                     
                 .project__title {
-                    font-size: 1.75rem;
                     padding-top: var(--big-padding);                    
                 }
 
@@ -349,17 +346,17 @@ $SECTION EXPERTISE
         height: 100%;
         padding: var(--small-sections-spacing) var(--sides-section-padding) 0 var(--sides-section-padding);
         
-        display: grid;
+        display: grid; /*usamos grid-template-areas para crear el efecto escalera*/
         grid-template-areas:
-            "imagine    .       ."
-            "imagine    design  ."
+            "imagine    .       .      "
+            "imagine    design  .      "
             "imagine    design  develop"
             ".          design  develop"
             ".          .       develop";
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
     }
-
+        /*damos nombre a cada uno de los elemento para poder posicionarlos arriba con grid-template-areas*/
         .expertise__area--imagine {grid-area: imagine;}
         .expertise__area--design {grid-area: design;}
         .expertise__area--develop {grid-area: develop;}
@@ -390,3 +387,53 @@ footer {
    padding: var(--big-sections-spacing) var(--sides-general-padding) 0 var(--sides-general-padding); 
 }
 
+/*------------------------------------*\
+
+$BREAK POINTS
+
+\*------------------------------------*/
+
+/*
+* ================================ max-width 1200px ================================
+*/
+
+@media (max-width: 1200px) {
+
+/*Augmentamos el tamaño del "folder-closure" */
+
+    .section-divider__folder-closure-container {
+            width: 20%;
+    }
+}
+
+/*
+* ================================ max-width 768px ================================
+*/
+
+@media (max-width: 768px) {
+
+/*Cambiamos la disposición de la "SECTION PROJECTS", los ejementos de cada uno de los poryectos pasan a estar en columna*/
+
+    .section__project {
+        flex-direction: column;
+    }
+    .section__project:nth-child(even) {
+            flex-direction: column;
+        }
+
+/*Cambiamos la disposición de la "SECTION EXPERTISE" a columna y sobreescribimos el grid*/
+
+    .expertise__container {
+        display: flex;
+        flex-direction: column;
+    }
+            .expertise__img {
+                object-position: center center;
+            }
+
+/*Augmentamos el tamaño del "folder-closure" */
+
+    .section-divider__folder-closure-container {
+            width: 25%;
+    }
+}
