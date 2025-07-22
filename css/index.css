@@ -276,7 +276,7 @@ $SECTION PROJECTS
         }
 
             .project__image {
-                min-height: 250px; 
+                min-height: 300px; 
                 background-color: grey;
                 border-radius: var(--medium-border-radius);
             }
