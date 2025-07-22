@@ -1,30 +1,13 @@
 /*------------------------------------*\
 
-$BODY & SHARED STYLES
-
-\*------------------------------------*/
-
-body {
-    background-color: var(--primary-color); /*por defecto la web tiene este color de fondo*/
-    color: var(--secondary-color); /*por defecto la web tiene este color de texto*/
-}
-
-.title__line {
-    background-color: var(--accent-color);
-    width: 100%;
-    height: 4px;
-}
-
-/*------------------------------------*\
-
 $HEADER
 
 \*------------------------------------*/
 
 .header__wrapper {
     width: 100%;
-    height: var(--height-header-size);
-    padding: var(--outside-header-padding);
+    height: var(--header-height);
+    padding: var(--header-padding-outer);
     position: fixed;
     z-index: 10; /*para que se posicione por debajo del header-nav__wrapper */
     
@@ -44,27 +27,19 @@ $HEADER
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: var( --inside-header-padding);
+            padding: var( --header-padding-inner);
         }
 
-            .header__logo-container {
-                width: 8%;
-                height: 100%;
-                
+            .header__logo-container {      
+                display:inline-flex; 
+                width:fit-content;
+                height:100%; 
+                flex: 0 0 auto;            
+                                
             }
-
-                .header__logo {
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    fill: var(--secondary-color);
-                }
 
             .header__btn {
                 height: 100%;
-                min-width: 8%;
                 padding: 0 1.5rem;
                 border-radius: var(--pill-style-edge);
                 background-color: var(--primary-color);
@@ -75,8 +50,8 @@ $HEADER
 
         .header-nav {
             width: 100%;
-            height: var(--height-header-size);
-            padding: var(--outside-header-padding);
+            height: var(--header-height);
+            padding: var(--header-padding-outer);
             position: fixed;
             top: 0;
             left: 0;
@@ -101,7 +76,7 @@ $HEADER
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            padding: var( --inside-header-padding);
+                            padding: var( --header-padding-inner);
 
                 }
 
@@ -168,7 +143,7 @@ $SECTION HELLO
 
     width: 100%;
     height: 100vh;
-    padding: calc(var(--height-header-size) + var(--small-sections-spacing)) var(--sides-section-padding) 0 var(--sides-section-padding);
+    padding: calc(var(--header-height) + var(--small-sections-spacing)) var(--sides-section-padding) 0 var(--sides-section-padding);
 
     display: flex;
     flex-direction: column;
@@ -255,27 +230,26 @@ $SECTION PROJECTS
     .projects__container {
         width: 100%;
         height: auto;
+        padding-top: 3.75rem;
 
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-
-        padding: 3.75rem 0 0 0;
+        
     }
 
         .section__project {
-            width: 100%;
-            min-height: 75vh;
+            width: 100%;           
             border-radius: var(--big-border-radius);
-            padding: 50px;
+            padding: clamp(1.5rem, 3vw, 4rem);  
 
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: stretch; 
-            gap: 50px;
+            gap: clamp(1.5rem, 3vw, 4rem); 
 
             color: var(--primary-color) /*para que el texto de todos sus hijos sea de este color*/
 
@@ -302,7 +276,7 @@ $SECTION PROJECTS
         }
 
             .project__image {
-                min-height: 400px; 
+                min-height: 250px; 
                 background-color: grey;
                 border-radius: var(--medium-border-radius);
             }
@@ -310,11 +284,11 @@ $SECTION PROJECTS
                 .project__skills-labels {
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 0.75rem;
+                    gap: clamp(0.5rem, 2vw, 0.75rem);
                 }
 
                     .label {
-                        padding: 0.75rem 2rem;
+                        padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 2vw, 1.25rem);
                         border-radius: var(--pill-style-edge);
                         background-color: var(--bg-color-labels);
                     }
@@ -398,6 +372,12 @@ $BREAK POINTS
 */
 
 @media (max-width: 1200px) {
+
+/*Augmentamos el ancho del header-nav__nav*/
+
+    .header-nav__nav {
+        width: 55%;
+    }
 
 /*Augmentamos el tamaño del "folder-closure" */
 

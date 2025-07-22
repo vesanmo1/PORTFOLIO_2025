@@ -6,59 +6,64 @@ $CUSTOM PROPERTIES
 
 :root{
 
-    /*----------SIZES----------*/
+/*
+* ============== SIZES ==============
+*/
 
-    /*Global*/
-    --sides-general-padding: clamp(1.5rem, 3vw, 7rem); /*padding lateral general de la web*/
-    --sides-section-padding: clamp(2rem, 6.5vw, 12rem); /*padding adicional del contenido dentro de una sección*/
-    --big-border-radius: clamp(3rem, 4.5vw, 6rem); /*bordes redondeados para secciones de la web*/
-    --medium-border-radius: clamp(1.5rem, 2.25vw, 2.875rem); /*bordes redondeados para secciones de la web dentro de otra sección con los bordes redondeados más grandes*/
-    --big-sections-spacing: clamp(3rem, 8vw, 13rem); /*separación grande entre secciones*/
-    --small-sections-spacing: 3.75rem; /*separación pequeña entre el título y el inicio de una sección*/
-    --pill-style-edge: 10rem; /*bordes totalmente redondeados para hacer un efecto píldora en elementos como etiquetas o botones*/
+    /*----------GLOBAL----------*/
+    --sides-general-padding:    clamp(1.5rem, 3vw, 7rem); /*padding lateral general de la web*/
+    --sides-section-padding:    clamp(2rem, 6.5vw, 12rem); /*padding adicional del contenido dentro de una sección*/
+    --big-border-radius:        clamp(2rem, 4.5vw, 6rem); /*bordes redondeados para secciones de la web*/
+    --medium-border-radius:     clamp(1rem, 2.25vw, 2.875rem); /*bordes redondeados para secciones de la web dentro de otra sección con los bordes redondeados más grandes*/
+    --big-sections-spacing:     clamp(3rem, 8vw, 13rem); /*separación grande entre secciones*/
+    --small-sections-spacing:   3.75rem; /*separación pequeña entre el título y el inicio de una sección*/
+    --pill-style-edge:          10rem; /*bordes totalmente redondeados para hacer un efecto píldora en elementos como etiquetas o botones*/
 
+    /*----------TEXT PADDINGS----------*/
+    --big-padding:      clamp(1.5rem, 2.5vw, 3.5rem);  
+    --medium-padding:   clamp(1rem, 1.5vw, 2rem);
+    --small-padding:    clamp(0.75rem, 0.875vw, 1rem);
 
-    /*Text paddings*/
-    --big-padding: clamp(1.5rem, 2.5vw, 3.5rem);  
-    --medium-padding: clamp(1rem, 1.5vw, 2rem);
-    --small-padding: clamp(0.75rem, 0.875vw, 1rem);
+    /*----------HEADER----------*/
 
-    /*Header*/
-    --height-header-size: 8rem;
-    --outside-header-padding: 1.5rem 3.75rem;
-    --inside-header-padding: 1rem;
+    --header-height:            6rem;
+    --header-padding-outer:     1rem 1.5rem;
+    --header-padding-inner:     0.75rem;
 
-    /*----------COLORS----------*/
+/*
+* ============== COLORS ==============
+*/
 
-    /*Web color palette*/
-    --primary-color: rgba(255, 249, 240, 1);
-    --secondary-color: rgba(31, 17, 0, 1);
-    --accent-color: rgba(205, 185, 150, 1);
+    /*----------WEB COLOR PALETTE----------*/
+    --primary-color:    rgba(255, 249, 240, 1);
+    --secondary-color:  rgba(31, 17, 0, 1);
+    --accent-color:     rgba(205, 185, 150, 1);
 
     /*----------PROJECTS COLORS----------*/
+
     /*Global*/
-    --bg-color-labels: rgba(0, 0, 0, 0.25);
+    --bg-color-labels:  rgba(0, 0, 0, 0.25);
 
     /*Project 1 color palette (Paula Perelló Podología)*/
-    --brunswick-color-project1:rgba(23, 63, 53, 1);
-    --cambridge-color-project1: rgba(120, 159, 144, 1);
-    --mindaro--color-project1: rgba(194, 225, 137, 1);
-    --glicina-color-project1: rgba(193, 167, 226, 1);
+    --brunswick-color-project1:     rgba(23, 63, 53, 1);
+    --cambridge-color-project1:     rgba(120, 159, 144, 1);
+    --mindaro--color-project1:      rgba(194, 225, 137, 1);
+    --glicina-color-project1:       rgba(193, 167, 226, 1);
 
     /*Project 2 color palette (The Cookie Jar)*/
-    --jazmin-color-project2: rgba(255, 237, 131, 1);
-    --amaranto-color-project2: rgba(158, 0, 68, 1);
-    --caedo--color-project2: rgba(236, 208, 242, 1);
-    --midnight-color-project2: rgba(0, 72, 69, 1);
-    --tea-color-project2: rgba(216, 241, 204, 1);
-    --chrysler-color-project2: rgba(33, 27, 198, 1);
-    --mint--color-project2: rgba(201, 242, 235, 1);
-    --mauveine-color-project2: rgba(127, 11, 160, 1);
+    --jazmin-color-project2:        rgba(255, 237, 131, 1);
+    --amaranto-color-project2:      rgba(158, 0, 68, 1);
+    --caedo--color-project2:        rgba(236, 208, 242, 1);
+    --midnight-color-project2:      rgba(0, 72, 69, 1);
+    --tea-color-project2:           rgba(216, 241, 204, 1);
+    --chrysler-color-project2:      rgba(33, 27, 198, 1);
+    --mint--color-project2:         rgba(201, 242, 235, 1);
+    --mauveine-color-project2:      rgba(127, 11, 160, 1);
 
     /*Project 3 color palette (Taurino Digital Agency)*/
-    --red-color-project3: rgba(206, 14, 48, 1);
-    --night-color-project3: rgba(17, 17, 20, 1);
-    --white-color-project3: rgba(245, 247, 251, 1);
+    --red-color-project3:           rgba(206, 14, 48, 1);
+    --night-color-project3:         rgba(17, 17, 20, 1);
+    --white-color-project3:         rgba(245, 247, 251, 1);
 
 }
 
@@ -85,11 +90,14 @@ h2 {
 
 h3,
 h4 {
-    font-size: clamp(1.5rem, 2.5vw, 4rem);
+    font-size: clamp(1rem, 2.5vw, 4rem);
     font-weight: 700;
 }
 
-
+p{
+    font-size: clamp(0.75rem, 1.75vw, 1rem);
+    font-weight: 400;
+}
 
 /*------------------------------------*\
 
@@ -137,3 +145,35 @@ $BUTTONS
         width: 1em;
         height: auto;
     }
+
+/*
+* ============ button breakpoint ============
+*/
+
+@media (max-width: 768px) {
+
+/*width 100% para los buttons en versión mobile*/
+
+    .general__btn {
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+
+}
+
+/*------------------------------------*\
+
+$BODY & SHARED STYLES
+
+\*------------------------------------*/
+
+body {
+    background-color: var(--primary-color); /*por defecto la web tiene este color de fondo*/
+    color: var(--secondary-color); /*por defecto la web tiene este color de texto*/
+}
+
+.title__line {
+    background-color: var(--accent-color);
+    width: 100%;
+    height: 4px;
+}
