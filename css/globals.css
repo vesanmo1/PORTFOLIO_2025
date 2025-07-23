@@ -95,7 +95,7 @@ h4 {
 }
 
 p{
-    font-size: clamp(0.75rem, 1.75vw, 1rem);
+    font-size: clamp(0.875rem, 1.75vw, 1rem);
     font-weight: 400;
 }
 
@@ -122,44 +122,32 @@ $BUTTONS
     color: var(--secondary-color);
     cursor: pointer;
 
-    transition: gap 0.2s;
+    transition: gap 0.2s,
+                box-shadow 0.05s;
+
 }
 
 .general__btn:hover{
     gap: 2rem;
+    
 }
 
 .general__btn:focus-within{
     gap: 2rem;
-    border: 2px solid var(--secondary-color);
-    box-shadow: 0.75rem 0.75rem 0 var(--bg-color-labels);
+    background: #FFF9F0;
+    border: 1px solid var(--secondary-color);
+    box-shadow: inset 8px 8px 0px var(--bg-color-labels);
 }
 
     .btn__link:focus {
         outline: none;
-        box-shadow: none;
-        text-decoration: underline;
+        box-shadow: none;      
     }
     
     .arrow {
         width: 1em;
         height: auto;
     }
-
-/*
-* ============ button breakpoint ============
-*/
-
-@media (max-width: 768px) {
-
-/*width 100% para los buttons en versión mobile*/
-
-    .general__btn {
-        width: 100%;
-        padding: 1rem 1rem;
-    }
-
-}
 
 /*------------------------------------*\
 
