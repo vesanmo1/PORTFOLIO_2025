@@ -1,25 +1,42 @@
 /**********************************************************
- * MOVIMIENTO DEL INDICADOR "TOGGLE" EN EL HEADER__NAV   *
+ * MOVIMIENTO DEL INDICADOR "TOGGLE" EN EL HEADER__NAV
+ *  – horizontal (fila)  |  vertical (columna ≤ 768 px)
  **********************************************************/
 
-// Este código permite que al hacer clic en un elemento del menú de navegación, el indicador se desplace. 
-// === [USO DE CHATGPT] === Se ha utilizado ChatGPT para la última parte (el cálculo del movimiento del indicador)
+const navItems  = document.querySelectorAll('.header-nav__item');
+const indicator = document.querySelector('.header-nav__indicator');
+const mq        = window.matchMedia('(max-width: 768px)'); // «mobile»
 
-const navItems = document.querySelectorAll('.header-nav__item');
-  const indicator = document.querySelector('.header-nav__indicator');
+// Guarda el índice de cada ítem para no recalcularlo
+navItems.forEach((item, i) => item.dataset.index = i);
 
-  navItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      // Quita la clase 'active' de todos
-      navItems.forEach(i => i.classList.remove('active'));
-      // Añade la clase 'active' al clicado
-      item.classList.add('active');
-      // Mueve el indicador al que tiene la clase 'active'
-      const percent = (100 / navItems.length) * index; // Divide el 100% del ancho entre el número de ítems, y lo multiplica por la posición del ítem actual (`index`).
-      indicator.style.left = `calc(${percent}% + 8px)`; //Accede al **estilo en línea** del elemento `indicator` y posiciona el elemento desde el borde izquierdo de su contenedor a la posición calculada.
-    });
-  });
+// Mueve el indicador en la dirección correcta
+function moveIndicator(index) {
+  const percent = (100 / navItems.length) * index;
 
+  if (mq.matches) {                    // menú en columna
+    indicator.style.top  = `calc(${percent}% + 0.5rem)`;   // vertical
+  } else {                             // menú en fila
+    indicator.style.left = `calc(${percent}% + 8px)`;   // horizontal
+  }
+}
+
+// Marca activo y desplaza
+function handleClick(e) {
+  navItems.forEach(i => i.classList.remove('active'));
+  const item = e.currentTarget;
+  item.classList.add('active');
+  moveIndicator(Number(item.dataset.index));
+}
+
+// Listeners para cada ítem
+navItems.forEach(item => item.addEventListener('click', handleClick));
+
+// Recoloca si el usuario cambia el tamaño/orientación
+mq.addEventListener('change', () => {
+  const active = document.querySelector('.header-nav__item.active');
+  if (active) moveIndicator(Number(active.dataset.index));
+});
 
 
 
