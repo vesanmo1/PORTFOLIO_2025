@@ -17,7 +17,7 @@ function moveIndicator(index) {
   if (mq.matches) {                    // menú en columna
     indicator.style.top  = `calc(${percent}% + 0.5rem)`;   // vertical
   } else {                             // menú en fila
-    indicator.style.left = `calc(${percent}% + 8px)`;   // horizontal
+    indicator.style.left = `calc(${percent}% + 0.5rem)`;   // horizontal
   }
 }
 

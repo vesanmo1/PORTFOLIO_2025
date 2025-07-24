@@ -99,9 +99,9 @@ $HEADER
 
                         transform: translateY(-50%); /* el eje central del indicador se alinea con el centro del menú */                        
                         top: 50%; /* el borde superior del indicador se alinea con el centro del menú */
-                        width: calc(100% / 4 - 16px); /* 100% dividido por el número de elementos del menú menos el padding */
-                        height: calc(100% - 12px); /* 100% de la altura del menú menos el padding */
-                        left: 8px; /*para que desde el principio haya un margen izquierdo entre el contenedor y el indicador*/                                            
+                        width: calc(100% / 4 - 1rem); /* 100% dividido por el número de elementos del menú menos el padding */
+                        height: calc(100% - 0.75rem); /* 100% de la altura del menú menos el padding */
+                        left: 0.5rem; /*para que desde el principio haya un margen izquierdo entre el contenedor y el indicador*/                                            
 
                         background: var(--secondary-color);
                         border-radius: var(--pill-style-edge);
@@ -391,11 +391,11 @@ $BREAK POINTS
         }
 
         .header-nav__indicator {
-            top: 8px;                     /* punto de partida (padding) */
+            top: 0.5rem;                     /* punto de partida (padding) */
             left: 50%;                    /* lo centramos en X… */
             transform: translateX(-50%);  /* …mediante translate */
             width: 30%;     /* llena el ancho menos padding lateral (8 px + 8 px) */
-            height: calc(100% / 4 - 16px);/* ¼ de la lista menos padding vertical */
+            height: calc(100% / 4 - 1rem);/* ¼ de la lista menos padding vertical */
 
             /* La animación ahora será vertical */
             transition: top 0.3s;
