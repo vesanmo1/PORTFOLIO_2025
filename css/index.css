@@ -381,16 +381,19 @@ $FOOTER
 
 .section__contact {        
     width: 100%;
-    padding: var(--big-sections-spacing) var(--sides-general-padding) var(--small-sections-spacing) var(--sides-general-padding);
+    padding-top: var(--big-sections-spacing);
 }
 
 .contact__container {
     min-height: clamp(200px, 20vw, 350px);
     width: 100%;
     height: auto;
-    border-radius: var(--medium-border-radius);  
     padding: var(--imner-cards-padding);
 
+    border-radius: var(--big-border-radius) var(--big-border-radius) 0 0;
+    box-shadow: 0.75rem -0.75rem 0 var(--shadow-color-transparent);      
+
+    background-image: url('../assets/images/wbmp/paper-texture.webp'); 
     background-color: var(--secondary-color-100);
     color: var(--primary-color);
 }
