@@ -11,15 +11,18 @@ $CUSTOM PROPERTIES
 */
 
     /*----------GLOBAL----------*/
+
     --sides-general-padding:    clamp(1.5rem, 3vw, 7rem); /*padding lateral general de la web*/
     --sides-section-padding:    clamp(2rem, 6.5vw, 12rem); /*padding adicional del contenido dentro de una sección*/
+    --imner-cards-padding:      clamp(1.5rem, 3vw, 4rem); /*padding interior de diferentes secciones con forma de carta*/
     --big-border-radius:        clamp(2rem, 4.5vw, 6rem); /*bordes redondeados para secciones de la web*/
     --medium-border-radius:     clamp(1rem, 2.25vw, 2.875rem); /*bordes redondeados para secciones de la web dentro de otra sección con los bordes redondeados más grandes*/
-    --big-sections-spacing:     clamp(3rem, 8vw, 13rem); /*separación grande entre secciones*/
+    --big-sections-spacing:     clamp(6rem, 10vw, 12rem); /*separación grande entre secciones*/
     --small-sections-spacing:   3.75rem; /*separación pequeña entre el título y el inicio de una sección*/
     --pill-style-edge:          10rem; /*bordes totalmente redondeados para hacer un efecto píldora en elementos como etiquetas o botones*/
 
     /*----------TEXT PADDINGS----------*/
+
     --big-padding:      clamp(1.5rem, 2.5vw, 3.5rem);  
     --medium-padding:   clamp(1rem, 1.5vw, 2rem);
     --small-padding:    clamp(0.75rem, 0.875vw, 1rem);
@@ -35,14 +38,16 @@ $CUSTOM PROPERTIES
 */
 
     /*----------WEB COLOR PALETTE----------*/
-    --primary-color:    rgba(255, 249, 240, 1);
-    --secondary-color:  rgba(31, 17, 0, 1);
-    --accent-color:     rgba(205, 185, 150, 1);
+
+    --primary-color:            rgba(255, 249, 240, 1);
+    --secondary-color-100:      rgba(31, 17, 0, 1);
+    --secondary-color-80:       rgba(76, 64, 48, 1);
+    --secondary-color-60:       rgba(121, 110, 96, 1);
+    --secondary-color-40:       rgba(166, 156, 144, 1);
+    --secondary-color-20:       rgba(210, 203, 192, 1);
+    --shadow-color-transparent: rgba(0, 0, 0, 0.25);
 
     /*----------PROJECTS COLORS----------*/
-
-    /*Global*/
-    --bg-color-labels:  rgba(0, 0, 0, 0.25);
 
     /*Project 1 color palette (Paula Perelló Podología)*/
     --brunswick-color-project1:     rgba(23, 63, 53, 1);
@@ -73,28 +78,38 @@ $TEXT STYLES
 
 \*------------------------------------*/
 
-:root {
+body {
      font-family: "Inter Tight", sans-serif;
     
 }
 
-h1 {
+h1,
+.h1 {
     font-weight: 900;
 }
 
-h2 {
+h2,
+.h2 {
     font-size: clamp(2rem, 3.5vw, 4rem);
     font-weight: 900;
-    text-transform: uppercase;
+    text-transform: uppercase;                 
 }
 
 h3,
+.h3,
 h4 {
     font-size: clamp(1rem, 2.5vw, 4rem);
     font-weight: 700;
 }
 
+h5,
+.h5 {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-weight: 400;
+}
+
 p,
+.p,
 li{
     font-size: clamp(0.875rem, 1.75vw, 1rem);
     font-weight: 400;
@@ -120,7 +135,7 @@ $BUTTONS
     align-items: center;
 
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--secondary-color-100);
     cursor: pointer;
 
     transition: gap 0.2s,
@@ -136,8 +151,7 @@ $BUTTONS
 .general__btn:focus-within{
     gap: 2rem;
     background: #FFF9F0;
-    border: 1px solid var(--secondary-color);
-    box-shadow: inset 8px 8px 0px var(--bg-color-labels);
+    box-shadow: inset 8px 8px 0px var(--shadow-color-transparent);
 }
 
     .btn__link:focus {
@@ -158,11 +172,11 @@ $BODY & SHARED STYLES
 
 body {
     background-color: var(--primary-color); /*por defecto la web tiene este color de fondo*/
-    color: var(--secondary-color); /*por defecto la web tiene este color de texto*/
+    color: var(--secondary-color-100); /*por defecto la web tiene este color de texto*/
 }
 
 .title__line {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color-40);
     width: 100%;
     height: 4px;
 }

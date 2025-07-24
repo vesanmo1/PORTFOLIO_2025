@@ -15,7 +15,7 @@ $HEADER
     .header {
         width: 100%;
         height: 100%;
-        background-color: var(--accent-color);
+        background-color: var(--secondary-color-40);
         border-radius: var(--pill-style-edge);
 
         display: flex;
@@ -23,7 +23,6 @@ $HEADER
         justify-content: space-between;
         align-items: center;
         padding: var( --header-padding-inner);
-
         position: relative;        
     }
 
@@ -39,13 +38,14 @@ $HEADER
                 display: none;
                 height: 100%;
                 aspect-ratio: 1;
+
+                background-color: var(--secondary-color-100);
+                border-radius: var(--pill-style-edge);
             }
 
-                .burguer-menu__container{
+                .nav-menu__container{
                     width: 100%;
-                    height: 100%; 
-                    background-color: var(--secondary-color);
-                    border-radius: var(--pill-style-edge);
+                    height: 100%;                     
 
                     display: flex;
                     justify-content: center;
@@ -54,13 +54,20 @@ $HEADER
 
                     .burguer-menu {
                         width: 80%;
+                        height: 80%;
+                        fill: var(--primary-color)
+                        }
+
+                    .cross-menu {
+                        width: 100%;
+                        height: 100%;
                         fill: var(--primary-color)
                         }
 
             .header-nav {
                 position: relative; /*para poder posicionar el header-nav__indicator usando absolute*/
                 height: 100%;
-                width: 45%;
+                width: 65%;
             }
 
                 .header-nav__list {
@@ -74,8 +81,7 @@ $HEADER
 
                     background: var(--primary-color);
                     border-radius: var(--pill-style-edge);
-                    overflow: hidden;
-                    
+                    overflow: hidden;                    
                 }
 
                     .header-nav__item {
@@ -103,7 +109,7 @@ $HEADER
                         height: calc(100% - 0.75rem); /* 100% de la altura del menú menos el padding */
                         left: 0.5rem; /*para que desde el principio haya un margen izquierdo entre el contenedor y el indicador*/                                            
 
-                        background: var(--secondary-color);
+                        background: var(--secondary-color-100);
                         border-radius: var(--pill-style-edge);
                         transition: left 0.3s;                        
 
@@ -127,33 +133,41 @@ $SECTION HELLO
     align-items: center;
 
     border-radius: 0 0 var(--big-border-radius) var(--big-border-radius); 
-    box-shadow: 0.75rem 0.75rem 0 var(--bg-color-labels);
+    box-shadow: 0.75rem 0.75rem 0 var(--shadow-color-transparent);
 
-    background-image: url('../assets/images/paper-texture.jpg'); 
+    background-image: url('../assets/images/wbmp/paper-texture.webp'); 
+    background-color: var(--secondary-color-100);
     background-size: cover;      
     background-position: center;  
     background-repeat: no-repeat; 
 
 }
 
-    .hello__intro {
-        padding-bottom: 1.5rem;
-        color: var(--primary-color);
-    }
-
-        .hello__greeting {
-        font-size: clamp(2rem, 2.5vw, 3rem);
-        font-weight: 300;
-        text-align: center;
+        .hello__greeting {            
+            font-size: clamp(2rem, 2.5vw, 3rem);
+            text-align: center;
+            color: var(--primary-color);
+            padding-bottom: 1.5rem;
         }
  
         .hello__title {
             font-size: clamp(3.5rem, 7vw, 8rem);
             line-height: 1.1;
-            color: var(--accent-color);
-            text-align: center;
-            
+            color: var(--primary-color);
+            text-shadow:5px 5px 0 var(--secondary-color-60);
+            text-align: center; 
+            transition: all 0.3s; 
+            cursor: default; 
         }
+
+        @media (hover:hover){
+            .hello__title:hover{
+                text-shadow:                    
+                    5px 5px 0 var(--secondary-color-60),
+                    10px 10px 0 var(--secondary-color-80),                   
+                    25px 25px 0 var(--shadow-color-transparent); 
+            }
+        }   
 
 /*------------------------------------*\
 
@@ -174,6 +188,7 @@ $DIVIDER
         top: 0;
         left: 50%; /* el borde izquierdo del container se alinea con el eje vertical de la web */
         transform: translate(-50%, -50%); /*el container se mueve el 50% de su anchura a la izquierda y el 50% de su altura hacia arriba*/
+        pointer-events:none;
     }
 
     .section-divider__img-wrapper {
@@ -186,10 +201,16 @@ $DIVIDER
     }
 
         .section-divider__img-container {
-            width: 50%;
-            height: 600px;
-            background-color: gray;
+            width: 100%;
+            height: 100%;;
         }
+
+            .divider__img {
+                width: 100%;
+                max-height: 100vh;
+                object-fit: contain;
+                object-position: center center;
+            }
 
 /*------------------------------------*\
 
@@ -219,13 +240,13 @@ $SECTION PROJECTS
         .section__project {
             width: 100%;           
             border-radius: var(--big-border-radius);
-            padding: clamp(1.5rem, 3vw, 4rem);  
+            padding: var(--imner-cards-padding);  
 
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: stretch; 
-            gap: clamp(1.5rem, 3vw, 4rem); 
+            gap: var(--imner-cards-padding); 
 
             color: var(--primary-color) /*para que el texto de todos sus hijos sea de este color*/
 
@@ -251,11 +272,22 @@ $SECTION PROJECTS
             background-color: var(--red-color-project3);
         }
 
-            .project__image {
-                min-height: 300px; 
-                background-color: grey;
+            .project__image-container {
+                position: relative;
+                min-height: 250px; 
                 border-radius: var(--medium-border-radius);
+                object-fit: cover;
+                overflow: hidden;
             }
+
+                .project__image {
+                    position: absolute;         /* superpuesta al contenedor */
+                    inset: 0;                   /* top:0; right:0; bottom:0; left:0; */
+                    width: 100%;
+                    height: 100%;               /* para que haga efecto object-fit */
+                    object-fit: cover;          /* recorta para cubrir */
+                    object-position: center;    /* centra el recorte vertical/horizontal */
+                }
 
                 .project__skills-labels {
                     display: flex;
@@ -266,7 +298,7 @@ $SECTION PROJECTS
                     .label {
                         padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 2vw, 1.25rem);
                         border-radius: var(--pill-style-edge);
-                        background-color: var(--bg-color-labels);
+                        background-color: var(--shadow-color-transparent);
                     }
                     
                 .project__title {
@@ -326,107 +358,160 @@ $SECTION EXPERTISE
                 padding-bottom: var(--small-padding);
             }
             
-
 /*------------------------------------*\
 
 $FOOTER
 
 \*------------------------------------*/
 
-footer {
-   padding: var(--big-sections-spacing) var(--sides-general-padding) 0 var(--sides-general-padding); 
+.section__contact {        
+    width: 100%;
+    padding: var(--big-sections-spacing) var(--sides-general-padding) var(--small-sections-spacing) var(--sides-general-padding);
 }
 
+.contact__container {
+    min-height: clamp(200px, 20vw, 350px);
+    width: 100%;
+    height: auto;
+    border-radius: var(--medium-border-radius);  
+    padding: var(--imner-cards-padding);
+
+    background-color: var(--secondary-color-100);
+    color: var(--primary-color);
+}
+
+    .section__description {
+        padding-top: var(--big-padding); 
+        padding-bottom: var(--small-padding); 
+    }
+
+    .mail__container { 
+        height: clamp(1rem, 1.5vw, 2rem);
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+    }
+
+        .icon__container {
+            height: 100%;
+            aspect-ratio: 1;
+        }
+
+            .mail__icon {
+                width: 100%;
+                height: 100%;
+            }
+
+    .footer__line {
+        margin-top: var(--small-padding);
+    }
+        
 /*------------------------------------*\
 
 $BREAK POINTS
 
 \*------------------------------------*/
 
-/*
-* ================================ max-width 1200px ================================
-*/
+
+/* ================================ max-width 1200px ================================ */
 
 @media (max-width: 1200px) {
 
-/*Augmentamos el ancho del header-nav__nav*/
-
-    .header-nav {
-        width: 65%;
-    }
-
-/*Augmentamos el tamaño del "folder-closure" */
-
+    /*Augmentamos el tamaño del "folder-closure" */
     .section-divider__folder-closure-container {
             width: 20%;
     }
 }
 
-/*
-* ================================ max-width 768px ================================
-*/
+/* ================================ max-width 768px ================================ */
 
 @media (max-width: 768px) {
 
-
-/*Augmentamos el ancho del header-nav*/
-
+    /*El botón de la navegación del header pasa a ser visible*/
     .header-nav__btn {
-    display: block;
+        display: block;
     }
+        /*Intercambio de visibilidad entre el burguer-menu y el cross-menu*/
+        /*Los estilos de ambos se encuentran más arriba en la sección HEADER*/
+        .nav-menu__container--burguer {
+            display: none;
+        }
 
+        .nav-menu__container--burguer.active {
+            display: flex;
+        }
+
+        .nav-menu__container--cross {
+        display: none;
+        }
+
+        .nav-menu__container--cross.active {
+            display: flex;
+        }
+
+    /*La lista de navegación pasa a ocupar el 100% y se reajusta para posicionarse correctamente*/
     .header-nav {
         position: relative;
         top: 1rem;
         width: 100%;
-        height: auto;
+        height: 0;
+        transition: all 0.3s ease;
+        pointer-events: none;
     }
 
+    /*Cuando tiene la clase active es visible*/
+    .header-nav.active {
+        height: 25vh; 
+        pointer-events: auto;
+
+    }
+        /*los ítems de navegación pasan de estar en fila a estar en columna*/
         .header-nav__list {
-            flex-direction: column;  
+            flex-direction: column; 
+            background-color: var(--primary-color);
+            border-radius: var(--big-border-radius);
+            box-shadow: 0.75rem 0.75rem 0 var(--shadow-color-transparent);
         }
 
-        .header-nav__item {
-            padding: 1rem 0;
-        }
+            /*les ponemos un padding en el top y el bottom para espaciar los ítems*/
+            .header-nav__item {
+                padding: 1rem 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;                
+            }
 
-        .header-nav__indicator {
-            top: 0.5rem;                     /* punto de partida (padding) */
-            left: 50%;                    /* lo centramos en X… */
-            transform: translateX(-50%);  /* …mediante translate */
-            width: 30%;     /* llena el ancho menos padding lateral (8 px + 8 px) */
-            height: calc(100% / 4 - 1rem);/* ¼ de la lista menos padding vertical */
-
-            /* La animación ahora será vertical */
-            transition: top 0.3s;
-        }
+            .header-nav__indicator {
+                top: 0.5rem; /*para que desde el principio haya un margen superior entre el contenedor y el indicador*/                  
+                left: 50%;  /*el borde izquierdo del indicador se alinea con el centro del menú */                  
+                transform: translateX(-50%);  /*el eje vertical del incidador de alinea con el eje vertical del indicador*/
+                width: 40%;     
+                height: calc(100% / 4 - 1rem); /* 100% dividido por el número de elementos del menú menos el padding */           
+                transition: top 0.3s;               
+            }
         
-
-
 /*Augmentamos el tamaño del "folder-closure" */
-
-    .section-divider__folder-closure-container {
-            width: 25%;
-    }
+.section-divider__folder-closure-container {
+        width: 25%;
+}
 
 /*Cambiamos la disposición de la "SECTION PROJECTS", los elementos de cada uno de los proyectos pasan a estar en columna*/
-
-    .section__project {
+.section__project {
+    flex-direction: column;
+}
+.section__project:nth-child(even) {
         flex-direction: column;
     }
-    .section__project:nth-child(even) {
-            flex-direction: column;
-        }
 
 /*width 100% para los buttons en versión columna*/
-
     .general__btn {
         width: 100%;
         padding: 1rem 1rem;
     }
 
 /*Cambiamos la disposición de la "SECTION EXPERTISE" a columna, sobreescribiendo el grid*/
-
     .expertise__container {
         display: flex;
         flex-direction: column;

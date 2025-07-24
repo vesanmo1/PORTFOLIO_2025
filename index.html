@@ -30,9 +30,14 @@
                 <img src="/assets/svg/logo.svg" alt="">  
             </div>          
             <button class="header-nav__btn">
-                <div class="burguer-menu__container">
+                <div class="nav-menu__container nav-menu__container--burguer active">
                     <svg class="burguer-menu" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                </div>
+                <div class="nav-menu__container nav-menu__container--cross">
+                    <svg class="cross-menu" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
                     </svg>
                 </div>
             </button>  
@@ -66,11 +71,14 @@
         <!--DIVIDER-->
         <div class="section-divider">
             <div class="section-divider__folder-closure-container">
-                <img src="/assets/svg/folder-closure.svg" alt="Imagen de un cierre de carpeta. Elemento decorativo de la web.">
+                <img src="./assets/svg/folder-closure.svg" alt="Imagen de un cierre de carpeta. Elemento decorativo de la web.">
             </div>            
             <div class="section-divider__img-wrapper">
                 <div class="section-divider__img-container">
-                    <img src="" alt="" class="section-divider__img">
+                        <picture>
+                            
+                            <img class="divider__img" src="./assets/images/screens-my-works.png" type="image/png" alt="número 1 con diseño efecto globo 'glossy'" loading="lazy">
+                        </picture>
                 </div>
             </div>
         </div>
@@ -81,8 +89,11 @@
             <div class="projects__container">
                 <!--Project 1-->
                 <section class="section__project  section__project--project1">
-                    <div class="project__image">
-                        <img src="" alt="">
+                    <div class="project__image-container">
+                        <picture>
+                            <source srcset="./assets/images/business-cards.jpg" type="image/jpg">
+                            <img class="project__image" src="./assets/images/wbmp/business-cards.webp" type="image/wbmp" alt="Imagen con el diseño de las tarjetas de visita creadas para el proyecto Paula Perelló Podología" loading="lazy">
+                        </picture>                        
                     </div>
                     <div class="project__content">
                         <div class="project__skills-labels">
@@ -108,8 +119,11 @@
                 </section>
                 <!--Project 2-->
                 <section class="section__project  section__project--project2">
-                    <div class="project__image">
-                        <img src="" alt="">
+                    <div class="project__image-container">
+                        <picture>
+                            <source srcset="./assets/images/business-cards.jpg" type="image/jpg">
+                            <img class="project__image" src="./assets/images/business-cards.webp" type="image/webp" alt="Imagen con el diseño de las tarjetas de visita creadas para el proyecto Paula Perelló Podología" loading="lazy">
+                        </picture>                        
                     </div>
                     <div class="project__content">
                         <div class="project__skills-labels">
@@ -138,8 +152,11 @@
                 </section>
                 <!--Project 3-->
                 <section class="section__project  section__project--project3">
-                     <div class="project__image">
-                        <img src="" alt="">
+                     <div class="project__image-container">
+                        <picture>
+                            <source srcset="./assets/images/taurino-project-desktop.jpg" type="image/jpg">
+                            <img class="project__image" src="./assets/images/wbmp/taurino-project-desktop.webp" type="image/webp" alt="Imagen con muchos móviles, en uno de ellos se puede ver el diseño de la web del proyecto Taurino" loading="lazy">
+                        </picture>                        
                     </div>
                     <div class="project__content">
                         <div class="project__skills-labels">
@@ -175,7 +192,10 @@
             <div class="expertise__container"> 
                 <section class="expertise__area expertise__area--imagine">
                     <div class="expertise__img-container">
-                        <img src="/assets/images/1.png" alt="" class="expertise__img">
+                        <picture>
+                            <source srcset="./assets/images/1.png" type="image/jpg">
+                            <img class="expertise__img" src="./assets/images/wbmp/1.webp" type="image/webp" alt="número 1 con diseño efecto globo 'glossy'" loading="lazy">
+                        </picture>
                     </div>
                     <h4 class="expertise__title">Imaginar</h4>
                     <p class="expertise__description">Donde todo comienza: entender, explorar y dar forma a ideas que conectan con las personas. 
@@ -183,7 +203,10 @@
                 </section> 
                 <section class="expertise__area expertise__area--design">
                     <div class="expertise__img-container">
-                        <img src="/assets/images/2.png" alt="" class="expertise__img">
+                        <picture>
+                            <source srcset="./assets/images/2.png" type="image/jpg">
+                            <img class="expertise__img" src="./assets/images/wbmp/2.webp" type="image/webp" alt="número 2 con diseño efecto globo 'glossy'" loading="lazy">
+                        </picture>
                     </div>
                     <h4 class="expertise__title">Diseñar</h4>
                     <p class="expertise__description">Donde todo comienza: entender, explorar y dar forma a ideas que conectan con las personas. 
@@ -191,7 +214,10 @@
                 </section> 
                 <section class="expertise__area expertise__area--develop">
                     <div class="expertise__img-container">
-                        <img src="/assets/images/3.png" alt="" class="expertise__img">
+                        <picture>
+                            <source srcset="./assets/images/3.png" type="image/jpg">
+                            <img class="expertise__img" src="./assets/images/wbmp/3.webp" type="image/webp" alt="número 3 con diseño efecto globo 'glossy'" loading="lazy">
+                        </picture>
                     </div>
                     <h4 class="expertise__title">Desarrollar</h4>
                     <p class="expertise__description">Donde todo comienza: entender, explorar y dar forma a ideas que conectan con las personas. 
@@ -199,10 +225,21 @@
                 </section> 
             </div> 
         </section>
-        <footer></footer>
     </main>
-    <footer>
-        <p>© 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+    <footer class="section section__contact" id="contact">
+        <div class="contact__container">
+            <p class="h2 section__title">¿Hablamos?</p>
+            <p class="h3 section__description">Si te ha gustado lo que hago no dudes en ponerte en contacto conmigo:</p>
+            <div class="mail__container">                
+                <div class="icon__container">
+                    <svg class="mail__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>                  
+                    </svg>
+                </div>
+                <p class="h5 mail__direction">veronicasanchez.design@gmail.com</p>                
+            </div>            
+            <div class="title__line footer__line"></div>
+        </div>    
     </footer>
 </body>
 </html>
