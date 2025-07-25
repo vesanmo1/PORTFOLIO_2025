@@ -204,34 +204,38 @@ $ANIMATIONS
 /* === [VISTO EN YOUTUBE: https://www.youtube.com/watch?v=16PncZlSNds === */
 
 /*El elemento aparece cuando entra en pantalla con un fundido y con movimiento vertical*/
-.auto-show {
-    animation: text-appear both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 100vh;
-}
-
-@keyframes text-appear {
-    from {
-        opacity: 0;
-        transform: translateY(200px)
+@supports (animation-timeline: view()) and (animation-range: entry 20% cover 100vh){
+    .auto-show {
+        animation: textAppear both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 100vh;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    @keyframes textAppear {
+        from {
+            opacity: 0;
+            transform: translateY(200px)
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
 
 /*El elemento entra y sale de pantalla difuminado*/
-.auto-blur {
-    animation: autoBlurAnimation linear both;
-    animation-timeline: view();
-}
+@supports (animation-timeline: view()){
+    .auto-blur {
+        animation: autoBlurAnimation linear both;
+        animation-timeline: view();
+    }
 
-@keyframes autoBlurAnimation {
-  0%, 100%  { filter: blur(20px); }  /* entra y sale difuso */
-  15%, 75%  { filter: blur(0);    }  /* mientras está visible */
-}
+    @keyframes autoBlurAnimation {
+    0%, 100%  { filter: blur(20px); }  /* entra y sale difuso */
+    15%, 75%  { filter: blur(0);    }  /* mientras está visible */
+    }
+
 
 /*El elemento aparece en pantalla augemntando su tamaño y con un pequeño movimiento vertical*/
 .fade-up {
@@ -265,6 +269,7 @@ $ANIMATIONS
     to {
         transform: rotate (360deg);
     }
+}
 }
 
 /*------------------------------------*\
