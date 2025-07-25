@@ -191,8 +191,7 @@ $BUTTONS
 
 .header__btn-link:hover,
 .header__btn-link:focus-within {
-    letter-spacing: 0.2em;
-    
+    letter-spacing: 0.2em;    
 }
 
 /*------------------------------------*\
@@ -214,7 +213,7 @@ $ANIMATIONS
     @keyframes textAppear {
         from {
             opacity: 0;
-            transform: translateY(200px)
+            transform: translateY(200px);
         }
 
         to {

@@ -253,7 +253,7 @@ $DIVIDER
 
         .section-divider__img-container {
             width: 100%;
-            height: 100%;;
+            height: 100%;
         }
 
             .divider__img {
@@ -296,9 +296,7 @@ $SECTION PROJECTS
             justify-content: center;
             align-items: stretch; 
             gap: var(--imner-cards-padding); 
-
-            color: var(--primary-color) /*para que el texto de todos sus hijos sea de este color*/
-
+            color: var(--primary-color); /*para que el texto de todos sus hijos sea de este color*/
         }
 
         .section__project > * { /*seleccionamos todos los hijos directos de .section__project*/
@@ -323,7 +321,6 @@ $SECTION PROJECTS
 
             .project__image-container {                 
                 border-radius: var(--medium-border-radius);
-
                 display: flex;
                 overflow: hidden;
             }
