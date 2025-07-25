@@ -31,15 +31,12 @@ $HEADER
             object-fit: contain;                                                       
         }
 
-            .header__logo-link {
-                display: flex; 
-                height: 100%;
-                width: auto;                
+            .header__logo-container,
+            .header__logo {    
+                height: 100%;  
+                aspect-ratio: 1; 
+                                                      
             }
-                        
-                .header__logo {    
-                    height: 100%;                                                         
-                }
 
 
 

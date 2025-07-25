@@ -26,15 +26,13 @@ $HEADER
         position: relative;        
     }
 
-            .header__logo-container{   
+            .header__logo-container,
+            .header__logo {    
                 height: 100%;  
-                object-fit: contain;                                                       
+                aspect-ratio: 1; 
+                                                      
             }
-                        
-                .header__logo {    
-                    height: 100%;                                                         
-                }
-                
+
             .header-nav__btn {
                 display: none;
                 height: 100%;
