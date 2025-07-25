@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vero - UX/UI Designer & Front-end Developer</title>
+    <title>Vero - Portfolio</title>
 
     <!--Inserción de la tipografía Inter Tight-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,16 +44,16 @@
             <nav class="header-nav">
                 <ul class="header-nav__list">
                     <li class="header-nav__item active">
-                        <a href="#hello">¡Hola!</a>
+                        <a class="header-nav__link" href="#hello">¡Hola!</a>
                     </li>
                     <li class="header-nav__item">
-                        <a href="#projects">Proyectos</a>
+                        <a class="header-nav__link" href="#projects">Proyectos</a>
                     </li>
                     <li class="header-nav__item">
-                        <a href="#expertise">Qúe hago</a>
+                        <a class="header-nav__link" href="#expertise">Qúe hago</a>
                     </li> 
                     <li class="header-nav__item">
-                        <a href="#contact">¿Hablamos?</a>
+                        <a class="header-nav__link" href="#contact">¿Hablamos?</a>
                     </li>                               
                 </ul>
                 <div class="header-nav__indicator"></div>
@@ -72,7 +72,13 @@
         <div class="section-divider">
             <div class="section-divider__folder-closure-container">
                 <img src="./assets/svg/folder-closure.svg" alt="Imagen de un cierre de carpeta. Elemento decorativo de la web.">
-            </div>            
+            </div>
+            <div class="section-divider__text-wrapper">
+                <div class="section-divider__text-container">
+                    <h2 class="section-divider__title">Te invito a descubrir los últimos trabajos que he realizado como UX/UI Designer y Front-end Developer.</h2> 
+                    <p class="h2 section-divider__content">No dudes en contactar conmigo si te gusta mi trabajo, ¡estaré encantada de responderte!</h2>  
+                </div>  
+            </div>       
             <div class="section-divider__img-wrapper">
                 <div class="section-divider__img-container">
                         <picture>
@@ -109,7 +115,7 @@
                         </div>
                         <p class="project__title">Paula Perelló Podología</p>                        
                         <h3 class="project__description">Diseño de identidad visual y piezas gráficas para una clínica podológica.</h3>
-                        <div class="general__btn">
+                        <div class="projects__btn">
                             <a href="projects/project_1.html" class="btn__link">Ver proyecto</a>
                             <div class="arrow__btn">
                                 <img src="assets/svg/arrow.svg" alt="flecha que indica el cambio a otra página" class="arrow">
@@ -142,7 +148,7 @@
                         </div>
                         <p class="project__title">The Cookie Jar</p>
                         <h3 class="project__description">Diseño y desarrollo de una plantilla personalizada de Wordpress.</h3>
-                        <div class="general__btn">
+                        <div class="projects__btn">
                             <a href="projects/project_2.html" class="btn__link">Ver proyecto</a>
                             <div class="arrow__btn">
                                 <img src="assets/svg/arrow.svg" alt="flecha que indica el cambio a otra página" class="arrow">
@@ -175,7 +181,7 @@
                         </div>
                         <p class="project__title">Taurino Digital Agency</p>
                         <h3 class="project__description">Creación de identidad visual y diseño de interfaz en Figma para empresa de servicios digitales.</h3>
-                        <div class="general__btn">
+                        <div class="projects__btn">
                             <a href="projects/project_3.html" class="btn__link">Ver proyecto</a>
                             <div class="arrow__btn">
                                 <img src="assets/svg/arrow.svg" alt="flecha que indica el cambio a otra página" class="arrow">
@@ -229,6 +235,7 @@
             </div> 
         </section>
     </main>
+    <!--FOOTER--> 
     <footer class="section section__contact" id="contact">
         <div class="contact__container">
             <p class="h2 section__title">¿Hablamos?</p>

@@ -121,7 +121,11 @@ $BUTTONS
 
 \*------------------------------------*/
 
-.general__btn {
+/*
+* ============== PROJECTS BUTTON ==============
+*/
+
+.projects__btn {
     width: fit-content;
     padding: 1rem 4rem;    
     border-radius: 10rem;
@@ -143,26 +147,45 @@ $BUTTONS
 
 }
 
-.general__btn:hover{
-    gap: 2rem;
-    
+.projects__btn:hover{
+    gap: 2rem;    
 }
 
-.general__btn:focus-within{
+.projects__btn:focus-within{
     gap: 2rem;
-    background: #FFF9F0;
     box-shadow: inset 8px 8px 0px var(--shadow-color-transparent);
 }
-
-    .btn__link:focus {
-        outline: none;
-        box-shadow: none;      
-    }
-    
+   
     .arrow {
         width: 1em;
         height: auto;
     }
+    
+/*
+* ============== HEADER BUTTON ==============
+*/
+
+.header__btn {
+    background-color: var(--secondary-color-100);
+    color: var(--primary-color);
+    height: 100%;
+    padding: 0 2rem;
+    border-radius: var(--pill-style-edge);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__btn-link {
+    transition: letter-spacing 0.3s;
+}
+
+.header__btn-link:hover,
+.header__btn-link:focus-within {
+    letter-spacing: 0.2em;
+    
+}
 
 /*------------------------------------*\
 
@@ -180,3 +203,54 @@ body {
     width: 100%;
     height: 4px;
 }
+
+/*------------------------------------*\
+
+$FOOTER
+
+\*------------------------------------*/
+
+.section__contact {        
+    width: 100%;
+    padding-top: var(--big-sections-spacing);
+}
+
+.contact__container {
+    min-height: clamp(200px, 20vw, 350px);
+    width: 100%;
+    height: auto;
+    padding: var(--imner-cards-padding);
+
+    border-radius: var(--big-border-radius) var(--big-border-radius) 0 0;  
+    background-image: url('../assets/images/webp/paper-texture.webp'); 
+    background-color: var(--secondary-color-100);
+    color: var(--primary-color);
+}
+
+    .section__description {
+        padding-top: var(--big-padding); 
+        padding-bottom: var(--small-padding); 
+    }
+
+    .mail__container { 
+        height: clamp(1rem, 1.5vw, 2rem);
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+    }
+
+        .icon__container {
+            height: 100%;
+            aspect-ratio: 1;
+        }
+
+            .mail__icon {
+                width: 100%;
+                height: 100%;
+            }
+
+    .footer__line {
+        margin-top: var(--small-padding);
+    }

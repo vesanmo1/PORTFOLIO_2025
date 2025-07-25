@@ -96,6 +96,15 @@ $HEADER
                         .header-nav__item.active {
                         color: var(--primary-color);
                         font-weight: 700;
+                    }
+
+                        .header-nav__link {
+                            transition: letter-spacing 0.3s;
+                        }
+
+                        .header-nav__link:hover,
+                        .header-nav__link:focus-within {
+                            letter-spacing: 0.2em;
                         }
 
                     /*indicador del menú de navegación*/
@@ -206,13 +215,33 @@ $DIVIDER
         pointer-events:none;
     }
 
+    .section-divider__text-wrapper {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .section-divider__text-container {
+            width: 60%;
+        }
+
+            .section-divider__title,
+            .section-divider__content{
+                text-align: center;
+                font-weight: 700;
+                text-transform: none;
+            }
+
     .section-divider__img-wrapper {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;        
+        align-items: center;
+        padding-top: var(--big-sections-spacing);    
     }
 
         .section-divider__img-container {
@@ -287,21 +316,18 @@ $SECTION PROJECTS
             background-color: var(--red-color-project3);
         }
 
-            .project__image-container {
-                position: relative;
-                min-height: 250px; 
+            .project__image-container {                 
                 border-radius: var(--medium-border-radius);
-                object-fit: cover;
+
+                display: flex;
                 overflow: hidden;
             }
 
                 .project__image {
-                    position: absolute;         /* superpuesta al contenedor */
-                    inset: 0;                   /* top:0; right:0; bottom:0; left:0; */
                     width: 100%;
-                    height: 100%;               /* para que haga efecto object-fit */
-                    object-fit: cover;          /* recorta para cubrir */
-                    object-position: center;    /* centra el recorte vertical/horizontal */
+                    height: 100%;               
+                    object-fit: cover;          
+                    object-position: center;    
                 }
 
                 .project__skills-labels {
@@ -372,57 +398,6 @@ $SECTION EXPERTISE
             .expertise__title {
                 padding-bottom: var(--small-padding);
             }
-            
-/*------------------------------------*\
-
-$FOOTER
-
-\*------------------------------------*/
-
-.section__contact {        
-    width: 100%;
-    padding-top: var(--big-sections-spacing);
-}
-
-.contact__container {
-    min-height: clamp(200px, 20vw, 350px);
-    width: 100%;
-    height: auto;
-    padding: var(--imner-cards-padding);
-
-    border-radius: var(--big-border-radius) var(--big-border-radius) 0 0;  
-    background-image: url('../assets/images/webp/paper-texture.webp'); 
-    background-color: var(--secondary-color-100);
-    color: var(--primary-color);
-}
-
-    .section__description {
-        padding-top: var(--big-padding); 
-        padding-bottom: var(--small-padding); 
-    }
-
-    .mail__container { 
-        height: clamp(1rem, 1.5vw, 2rem);
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: start;
-        align-items: center;
-        gap: 1rem;
-    }
-
-        .icon__container {
-            height: 100%;
-            aspect-ratio: 1;
-        }
-
-            .mail__icon {
-                width: 100%;
-                height: 100%;
-            }
-
-    .footer__line {
-        margin-top: var(--small-padding);
-    }
         
 /*------------------------------------*\
 
@@ -512,6 +487,11 @@ $BREAK POINTS
 .section-divider__folder-closure-container {
         width: 25%;
 }
+
+    /*Pasa a ocupar el 90% del ancho de pantalla */
+    .section-divider__text-container {
+        width: 90%;
+    }
 
 /*Cambiamos la disposición de la "SECTION PROJECTS", los elementos de cada uno de los proyectos pasan a estar en columna*/
 .section__project {

@@ -24,6 +24,8 @@ a{
     display: block;
     color:inherit;
     text-decoration: none;
+    outline: none;
+    box-shadow: none;
 }
 p a{
     display: inline;
@@ -59,3 +61,4 @@ fieldset {
 button , label{
     cursor: pointer;
 }
+
