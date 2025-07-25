@@ -83,6 +83,11 @@ body {
     
 }
 
+/*
+* ============== COLORS ==============
+*/
+
+
 h1,
 .h1 {
     font-weight: 900;
@@ -198,10 +203,85 @@ body {
     color: var(--secondary-color-100); /*por defecto la web tiene este color de texto*/
 }
 
+.section--initial {    
+    width: 100%;
+    height: 100vh;
+}
+
+
+/*si el navegador soporta dvh usar esta propiedad*/
+@supports (height: 100dvh) {
+    .section--initial {
+        height: 100dvh;
+  }
+}
+
+.section {
+    width: 100%;
+    height: auto;
+    padding: var(--big-sections-spacing) var(--sides-general-padding) 0 var(--sides-general-padding);
+}
+
 .title__line {
     background-color: var(--secondary-color-40);
     width: 100%;
     height: 4px;
+}
+
+/*------------------------------------*\
+
+$ANIMATIONS
+
+\*------------------------------------*/
+
+/* === [VISTO EN YOUTUBE: https://www.youtube.com/watch?v=16PncZlSNds === */
+
+/*El elemento aparece cuando entra en pantalla con un fundido y con movimiento vertical*/
+.auto-show {
+    animation: text-appear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+
+@keyframes text-appear {
+    from {
+        opacity: 0;
+        transform: translateY(200px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*El elemento entra y sale de pantalla difuminado*/
+.auto-blur {
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+
+@keyframes autoBlurAnimation {
+  0%, 100%  { filter: blur(20px); }  /* entra y sale difuso */
+  15%, 75%  { filter: blur(0);    }  /* mientras está visible */
+}
+
+/*El elemento aparece en pantalla augemntando su tamaño y con un pequeño movimiento vertical*/
+.fade-up {
+    animation: fadeUp both;
+    animation-timeline: view();
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 /*------------------------------------*\
