@@ -67,7 +67,7 @@ $HEADER
             .header-nav {
                 position: relative; /*para poder posicionar el header-nav__indicator usando absolute*/
                 height: 100%;
-                width: 50%;
+                min-width: 75%;
             }
 
                 .header-nav__list {
@@ -148,6 +148,10 @@ $SECTION HELLO
     background-repeat: no-repeat; 
 }
 
+/*
+* ============== TEXTS WITH SPECIAL STYLES THAT ARE ONLY USED HERE ==============
+*/
+
         .hello__caption {            
             font-size: clamp(2rem, 2.5vw, 3rem);
             text-align: center;
@@ -182,7 +186,9 @@ $SECTION HELLO
             }
         } 
 
-        
+/*
+* ===============================================================================
+*/       
 
 /*------------------------------------*\
 
@@ -214,6 +220,9 @@ $DIVIDER
         align-items: center;
     }
 
+/*
+* ============== TEXTS WITH SPECIAL STYLES THAT ARE ONLY USED HERE ==============
+*/
         .section-divider__text-container {
             width: 60%;
         }
@@ -227,6 +236,11 @@ $DIVIDER
 .emphasize {
     background-color: var(--secondary-color-20);
 }
+
+/*
+* ===============================================================================
+*/       
+
     .section-divider__img-wrapper {
         width: 100%;
         height: auto;

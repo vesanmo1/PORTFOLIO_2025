@@ -84,7 +84,7 @@ body {
 }
 
 /*
-* ============== COLORS ==============
+* ============== HEADINGS ==============
 */
 
 
@@ -109,9 +109,14 @@ h4 {
 
 h5,
 .h5 {
-    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-size: clamp(0.75rem, 1.5vw, 2rem);
     font-weight: 400;
 }
+
+/*
+* ============== BODY TEXT, LISTS... ==============
+*/
+
 
 p,
 .p,
@@ -129,7 +134,6 @@ $BUTTONS
 /*
 * ============== PROJECTS BUTTON ==============
 */
-
 .projects__btn {
     width: fit-content;
     padding: 1rem 4rem;    
@@ -169,7 +173,6 @@ $BUTTONS
 /*
 * ============== HEADER BUTTON ==============
 */
-
 .header__btn {
     background-color: var(--secondary-color-100);
     color: var(--primary-color);
@@ -190,42 +193,6 @@ $BUTTONS
 .header__btn-link:focus-within {
     letter-spacing: 0.2em;
     
-}
-
-/*------------------------------------*\
-
-$BODY & SHARED STYLES
-
-\*------------------------------------*/
-
-body {
-    background-color: var(--primary-color); /*por defecto la web tiene este color de fondo*/
-    color: var(--secondary-color-100); /*por defecto la web tiene este color de texto*/
-}
-
-.section--initial {    
-    width: 100%;
-    height: 100vh;
-}
-
-
-/*si el navegador soporta dvh usar esta propiedad*/
-@supports (height: 100dvh) {
-    .section--initial {
-        height: 100dvh;
-  }
-}
-
-.section {
-    width: 100%;
-    height: auto;
-    padding: var(--big-sections-spacing) var(--sides-general-padding) 0 var(--sides-general-padding);
-}
-
-.title__line {
-    background-color: var(--secondary-color-40);
-    width: 100%;
-    height: 4px;
 }
 
 /*------------------------------------*\
@@ -282,6 +249,56 @@ $ANIMATIONS
         opacity: 1;
         transform: translateY(0) scale(1);
     }
+}
+
+/*El elemento rota cuando aparece en pantalla*/
+.auto-rotate {
+    animation: AutoRotateAnimation;
+    animation-timeline: view();
+}
+
+@keyframes AutoRotateAnimation {
+    from {
+        transform: rotate (0deg);
+    }
+
+    to {
+        transform: rotate (360deg);
+    }
+}
+
+/*------------------------------------*\
+
+$BODY & SHARED STYLES
+
+\*------------------------------------*/
+
+body {
+    background-color: var(--primary-color); /*por defecto la web tiene este color de fondo*/
+    color: var(--secondary-color-100); /*por defecto la web tiene este color de texto*/
+}
+
+.section-initial {    
+    width: 100%;
+    height: 100vh;
+}
+    /*si el navegador soporta dvh usar esta propiedad*/
+    @supports (height: 100dvh) {
+        .section-initial {
+            height: 100dvh;
+    }
+    }
+
+.section {
+    width: 100%;
+    height: auto;
+    padding: var(--big-sections-spacing) var(--sides-general-padding) 0 var(--sides-general-padding);
+}
+
+.title__line {
+    background-color: var(--secondary-color-40);
+    width: 100%;
+    height: 4px;
 }
 
 /*------------------------------------*\
