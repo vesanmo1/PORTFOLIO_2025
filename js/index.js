@@ -4,19 +4,19 @@
 // Este código permite que al hacer clic el header-nav__btn al header.nav se le añade la clase active y se hace visible
 // === [VISTO EN CLASE: https://www.youtube.com/watch?v=_M0K_q617Kc&t=5s] === 
 
-const headerNavButton = document.querySelector ('.header-nav__btn')
-const headerNav = document.querySelector ('.header-nav')
+const headerNavButton = document.querySelector ('.header-nav__btn');
+const headerNav = document.querySelector ('.header-nav');
 
 //mi muy pequeña aportacion 🥲
-const burguerMenu = document.querySelector ('.nav-menu__container--burguer')
-const crossMenu = document.querySelector ('.nav-menu__container--cross')
+const burguerMenu = document.querySelector ('.nav-menu__container--burguer');
+const crossMenu = document.querySelector ('.nav-menu__container--cross');
 
 headerNavButton.addEventListener(`click`,()=>{
-  headerNav.classList.toggle(`active`)
+  headerNav.classList.toggle(`active`);
 
   //mi muy pequeña aportacion 🥲 (cambiar el menú burguer por la cruz cuando el hader-nav aparece y desaparece) 
-  burguerMenu.classList.toggle(`active`)
-  crossMenu.classList.toggle(`active`)
+  burguerMenu.classList.toggle(`active`);
+  crossMenu.classList.toggle(`active`);
 })
 
 /**********************************************************
