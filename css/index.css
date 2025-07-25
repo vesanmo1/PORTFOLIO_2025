@@ -26,10 +26,11 @@ $HEADER
         position: relative;        
     }
 
-            .header__logo-container {      
-                display: flex;          
-                flex: 0 0 auto;    
-                line-height: 0;                                       
+            .header__logo-container,
+            .header__logo {    
+                height: 100%;  
+                aspect-ratio: 1; 
+                                                      
             }
 
             .header-nav__btn {
