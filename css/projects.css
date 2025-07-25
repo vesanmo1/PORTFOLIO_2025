@@ -9,29 +9,37 @@ $HEADER
     height: var(--header-height);
     padding: var(--header-padding-outer);
     position: fixed;   
-    z-index: 1; /*Para que se posicione por encima del resto de cosas de la web*/
+    z-index: 100; /*Para que se posicione por encima del resto de cosas de la web*/
 }
 
     .header {
         width: 100%;
         height: 100%;
-        background-color: var(--primary-color);
+        padding: var(--header-padding-inner);
+        background-color: var(--secondary-color-40);
         border-radius: var(--pill-style-edge);
 
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
-        padding: var( --header-padding-inner);
         position: relative;        
     }
 
-            .header__logo-container,
-            .header__logo-link {      
-                display:inline-flex; 
-                width:fit-content;
-                height:100%; 
-                flex: 0 0 auto;                        
+        .header__logo-container{   
+            height: 100%;  
+            object-fit: contain;                                                       
+        }
+
+            .header__logo-link {
+                display: flex; 
+                height: 100%;
+                width: auto;                
             }
+                        
+                .header__logo {    
+                    height: 100%;                                                         
+                }
+
 
 

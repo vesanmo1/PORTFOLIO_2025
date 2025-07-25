@@ -156,12 +156,13 @@ $BUTTONS
 
 }
 
+@media (hover:hover){
 .projects__btn:hover{
     gap: 2rem;    
 }
+}
 
 .projects__btn:focus-within{
-    gap: 2rem;
     box-shadow: inset 8px 8px 0px var(--shadow-color-transparent);
 }
    
@@ -169,6 +170,7 @@ $BUTTONS
         width: 1em;
         height: auto;
     }
+
     
 /*
 * ============== HEADER BUTTON ==============
