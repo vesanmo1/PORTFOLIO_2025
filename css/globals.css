@@ -185,14 +185,15 @@ $BUTTONS
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.header__btn-link {
     transition: letter-spacing 0.3s;
 }
 
-.header__btn-link:hover,
-.header__btn-link:focus-within {
+.header__btn-link {
+    
+}
+
+.header__btn:hover,
+.header__btn:focus-within {
     letter-spacing: 0.2em;    
 }
 
