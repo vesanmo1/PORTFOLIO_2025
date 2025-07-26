@@ -429,5 +429,30 @@ $FOOTER
         margin-top: var(--small-padding);
     }
 
+/*------------------------------------*\
+
+$BREAK POINTS
+
+\*------------------------------------*/
 
 
+/* ================================ max-width 1024px ================================ */
+
+@media (max-width: 1024px) {
+
+/*Augmentamos el tamaño del "folder-closure" */
+.folder-closure {
+        width: 10%;
+}
+}
+
+
+/* ================================ max-width 768px ================================ */
+
+@media (max-width: 768px) {
+
+/*Augmentamos el tamaño del "folder-closure" */
+.folder-closure {
+        width: 15%;
+}
+}

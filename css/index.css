@@ -188,7 +188,7 @@ $DIVIDER
 .section-divider {
     width: 100%;
     height: auto;
-    padding-top: var(--big-sections-spacing);
+    padding-top: calc(var(--big-sections-spacing) * 2);
 }
 
     .section-divider__text-wrapper {
@@ -212,9 +212,9 @@ $DIVIDER
                 font-weight: 700;
                 text-transform: none;
             }
-.emphasize {
-    background-color: var(--secondary-color-20);
-}
+                .emphasize {
+                    background-color: var(--secondary-color-20);
+                }
 
 /*
 * ===============================================================================
@@ -428,14 +428,9 @@ $BREAK POINTS
                 width: 40%;     
                 height: calc(100% / 4 - 1rem); /* 100% dividido por el número de elementos del menú menos el padding */           
                 transition: top 0.3s;               
-            }
-        
-/*Augmentamos el tamaño del "folder-closure" */
-.section-divider__folder-closure-container {
-        width: 25%;
-}
+            }   
 
-    /*Pasa a ocupar el 90% del ancho de pantalla */
+    /*El texto de la sección divider pasa a ocupar el 90% del ancho de pantalla */
     .section-divider__text-container {
         width: 90%;
     }
