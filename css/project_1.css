@@ -103,7 +103,7 @@ $IMG DIVIDER
 
 .img__divider {
     width: 100%;
-    min-height: 70vh;
+    height: 100%;
     display: flex;
     padding-top: var(--big-sections-spacing);
     overflow: hidden;
@@ -117,6 +117,62 @@ $VALUE PROPOSITION & CUSTOMER PROFILE
 
 .section__customer {
     width: 100%;
-    height: 100vh;
-    background-color: grey;
+    height: auto;
+
 }
+
+    .customer__wrapper {
+        width: 100%;
+        height: 100%;
+        padding: var(--small-sections-spacing) var(--sides-section-padding) 0 var(--sides-section-padding);
+
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+        .customer__container {
+            width: 100%;
+            height: 100%;         
+        }
+
+            .customer__container-title {
+                padding-bottom: var(--medium-padding);
+            }
+
+                .accordion__container {
+                    width: 100%;
+                    height: auto;
+                    padding: 1rem;
+                    border-bottom: 1px solid var(--secondary-color-100);
+                }
+
+                    .accordion__title-arrow {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-between;
+                    }
+
+                        .accordion__arrow {
+                            transition: transform 0.4s ease;
+                        }
+
+                        .accordion__arrow.active {
+                            transform: rotate(180deg);
+                        }
+
+                    .accordion__text-container {
+                        padding: 0;
+                        height: 0;
+                        overflow: hidden;
+                        transition: all 0.4s ease;
+                    }
+
+                    .accordion__text-container.active {
+                        padding-top: var(--small-padding);
+                        height: auto;
+                    }
+
+                        .accordion__text {
+                            padding-bottom: 0.5rem;
+                        }

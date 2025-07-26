@@ -107,20 +107,20 @@ h2,
 h3,
 .h3,
 h4 {
-    font-size: clamp(1.5rem, 2.5vw, 4rem);
+    font-size: clamp(1.5rem, 2.5vw, 3.5rem);
     font-weight: 700;
 }
 
 h5,
 .h5 {
-    font-size: clamp(0.75rem, 1.5vw, 2rem);
+    font-size: clamp(1, 1.5vw, 2rem);
     font-weight: 400;
 }
 
 h6,
 .h6 {
-    font-size: clamp(0.75rem, 1.5vw, 1.5rem);
-    font-weight: 400;
+    font-size: clamp(0.875rem, 1.5vw, 1.5rem);
+    font-weight: 700;
 }
 
 /*

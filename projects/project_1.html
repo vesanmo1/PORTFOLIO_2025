@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="../css/projects.css">
     <link rel="stylesheet" href="../css/project_1.css">
 
+    <!--Inserción de los archivos JS-->
+    <script src="../js/project_1.js" defer></script>
+
 </head>
 
 <body>
@@ -87,7 +90,7 @@
                     <div class="goals__wrapper">
                         <h1>Paula Perelló Podología es una empresa familiar que busca cubrir 
                             una necesidad y dar un sevicio accesible en una pequeña localidad.</h1>
-                        <p class="h3 section__title goals__title">1. Objetivos del proyecto</p>
+                        <p class="h3 section__title goals__title">Objetivos del proyecto</p>
                         <div class="goals__container">
                             <p class="h6 goal">Construir una identidad de marca sólida y coherente que transmita confianza y profesionalidad.</p>
                             <p class="h6 goal">Diseñar una marca única y representativa, evitando caer en los colores y simbología habituales.</p>
@@ -99,14 +102,130 @@
             </section>
             <!--IMG DIVIDER-->
             <div class="img__divider">
-                <picture">
+                <picture class="cover__picture">
                     <source srcset="../assets/images/circle-sign-mockup.jpg" type="image/jpg">
-                    <img class="cover__img" src="../assets/images/webp/circle-sign-mockup.webp" type="image/webp" alt="señal de la fachada de la clínica con el logo de la podología" loading="lazy">
+                    <img class="cover__image" src="../assets/images/webp/circle-sign-mockup.webp" type="image/webp" alt="señal de la fachada de la clínica con el logo de la podología" loading="lazy">
                 </picture>
             </div>
             <!--VALUE PROPOSITION & CUSTOMER PROFILE-->
             <section class="section section__customer">
-
+                <h2 class="uppercase">Propuesta de valor y perfil del cliente.</h2>
+                <div class="underlined"></div>
+                <div class="customer__wrapper">
+                    <!--Value proposition-->
+                    <div class="customer__container">                        
+                        <h3 class="customer__container-title">Propuesta de valor</h3>                        
+                        <div class="accordion__wrapper">
+                            <!--Proposal 1-->
+                            <div class="accordion__container">
+                                <div class="accordion__title-arrow">
+                                    <h4 class="h6 accordion__title">Productos y servicios:</h4>                                   
+                                    <div class="accordion__arrow-container">
+                                        <svg class="accordion__arrow accordion__arrow--propossal" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="accordion__text-container accordion__text-container--propossal">
+                                    <p class="accordion__text">- Identidad visual coherente y significativa.</p>
+                                    <p class="accordion__text">- Logotipo versátil y reconocible, que funciona en distintos formatos.</p>
+                                    <p class="accordion__text">- Sistema cromático diferenciado que opta por una combinación fresca y moderna de verdes y morado.</p>
+                                    <p class="accordion__text">- Aplicación consistente del branding, asegurando una experiencia visual uniforme y profesional.</p>
+                                    <p class="accordion__text">- Tipografía y estilo gráfico amigables y accesibles.</p>
+                                </div>
+                            </div>
+                            <!--Proposal 2-->
+                            <div class="accordion__container">
+                                <div class="accordion__title-arrow">
+                                    <h4 class="h6 accordion__title">Generadores de beneficios:</h4>                                   
+                                    <div class="accordion__arrow-container">
+                                        <svg class="accordion__arrow accordion__arrow--propossal" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="accordion__text-container accordion__text-container--propossal">
+                                    <p class="accordion__text">- Diferenciación frente a la competencia gracias a una identidad visual no genérica.</p>
+                                    <p class="accordion__text">- Equilibrio entre modernidad, calidez y profesionalismo.</p>
+                                    <p class="accordion__text">- Facilidad de recuerdo y reconocimiento, vital para una clínica de pueblo donde el boca a boca y la percepción visual son clave.</p>
+                                    <p class="accordion__text">- Cohesión entre la identidad de la profesional (Paula) y la marca, reforzando el trato personalizado y creando un lazo auténtico entre paciente y marca.</p>
+                                </div>
+                            </div>
+                            <!--Proposal 3-->
+                            <div class="accordion__container">
+                                <div class="accordion__title-arrow">
+                                    <h4 class="h6 accordion__title">Aliviadores de dolor:</h4>                                   
+                                    <div class="accordion__arrow-container">
+                                        <svg class="accordion__arrow accordion__arrow--propossal" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="accordion__text-container accordion__text-container--propossal">
+                                    <p class="accordion__text">- Rompe con la frialdad asociada al sector salud con una identidad visual amigable</p>
+                                    <p class="accordion__text">- Soluciona la falta de identidad gráfica en clínicas pequeñas, brindando una estética cuidada que compite con marcas grandes sin perder la esencia local..</p>
+                                    <p class="accordion__text">- Minimiza el esfuerzo de reconocimiento de marca, al utilizar elementos visuales que comunican la especialidad de forma directa y memorable.</p>
+                                    <p class="accordion__text">- Ayuda a construir una reputación positiva a largo plazo, desde lo visual, fortaleciendo el posicionamiento y la percepción en la mente del público.</p>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div>
+                    <!--Customer profile--> 
+                    <div class="customer__container">                        
+                        <h3 class="customer__container-title">Perfil del cliente</h3>                        
+                        <div class="accordion__wrapper">
+                            <!--Profile 1-->
+                            <div class="accordion__container">
+                                <div class="accordion__title-arrow">
+                                    <h4 class="h6 accordion__title">Tareas del cliente:</h4>                                   
+                                    <div class="accordion__arrow-container">
+                                        <svg class="accordion__arrow accordion__arrow--profile" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="accordion__text-container accordion__text-container--profile">
+                                    <p class="accordion__text">- Identificar un lugar de confianza.</p>
+                                    <p class="accordion__text">- Distinguir entre diferentes opciones de atención podológica disponibles en su zona.</p>
+                                    <p class="accordion__text">- Reconocer visualmente y recordar fácilmente la clínica.</p>
+                                </div>
+                            </div>
+                            <!--Profile 2-->
+                            <div class="accordion__container">
+                                <div class="accordion__title-arrow">
+                                    <h4 class="h6 accordion__title">Alegrías o motivaciones:</h4>                                   
+                                    <div class="accordion__arrow-container">
+                                        <svg class="accordion__arrow accordion__arrow--profile" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="accordion__text-container accordion__text-container--profile">
+                                    <p class="accordion__text">- Percibir que la clínica tiene una identidad moderna, cuidada y profesional, lo cual refuerza la confianza.</p>
+                                    <p class="accordion__text">- Identificarse con una marca local que proyecta cercanía y humanidad.</p>
+                                    <p class="accordion__text">- Conectar con una estética que no remite a lo frío o estandarizado del entorno médico tradicional.</p>
+                                </div>
+                            </div>
+                            <!--Profile 3-->
+                            <div class="accordion__container">
+                                <div class="accordion__title-arrow">
+                                    <h4 class="h6 accordion__title">Frustraciones:</h4>                                   
+                                    <div class="accordion__arrow-container">
+                                        <svg class="accordion__arrow accordion__arrow--profile" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="accordion__text-container accordion__text-container--profile">
+                                    <p class="accordion__text">- Confusión ante marcas genéricas o clínicas sin identidad clara (poco memorables o impersonales).</p>
+                                    <p class="accordion__text">- Desconfianza frente a espacios de salud con estética anticuada o impersonal.</p>
+                                    <p class="accordion__text">- Sensación de frialdad o distancia en clínicas que no reflejan calidez desde su imagen.</p>
+                                    <p class="accordion__text">- Dificultad para diferenciar entre opciones locales que no comunican su especialidad de forma visual.</p>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div>                  
+                </div>
             </section>
 
     </main>
