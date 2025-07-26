@@ -4,38 +4,69 @@ $INTRO
 
 \*------------------------------------*/
 
-.intro__project1 {
-    width: 100%;
-    height: 100vh;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.item {
-    flex: 1;
-}
-
-.item__izquierda {
-    background-color: red;
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    overflow: hidden;
-}
-
-.item__derecha {
+.intro__project--1 {
     background-color: var(--brunswick-color-project1);
-    width: 100%;
-    height: 100%;
+    border-radius: 0 0 var(--big-border-radius) var(--big-border-radius); 
+    box-shadow: 0.75rem 0.75rem 0 var(--shadow-color-transparent);
 }
 
-.img { 
-    width: 100%;
-    height: 100%;
-    object-fit: cover;         
-    object-position: center;                    
-}
+    .intro__section--content {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        
+    }
+
+        .content__section--summary {
+            color: var(--primary-color);
+            min-height: 200px;
+            padding: 0 var(--sides-general-padding) clamp(2rem, 10vw, 7rem);
+
+            display: grid;
+            grid-template-areas: 
+                "name       name"
+                "type       type"
+                "duration   role"
+                "tools      tools";  
+                
+                     
+        }
+
+        .summary__content--name{grid-area: name;}
+        .summary__content--type{grid-area: type;}
+        .summary__content--duration{grid-area: duration;}
+        .summary__content--role{grid-area: role;}
+        .summary__content--tools{grid-area: tools;}
+
+        .summary__content {
+            border: 1px solid var(--primary-color);
+            padding: var(--gap-summary-grid);
+
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap-summary-grid);
+        }
+
+            .summary__title {
+                text-transform: uppercase;
+            }
+
+    .intro__section--img {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .intro__img {
+            width: 70%;
+            min-width: 650px;
+            height: 70%;
+            object-fit: contain;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+

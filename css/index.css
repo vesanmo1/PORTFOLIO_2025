@@ -66,7 +66,7 @@ $HEADER
             .header-nav {
                 position: relative; /*para poder posicionar el header-nav__indicator usando absolute*/
                 height: 100%;
-                min-width: 75%;
+                min-width: 65%;
             }
 
                 .header-nav__list {
