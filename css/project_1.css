@@ -176,3 +176,44 @@ $VALUE PROPOSITION & CUSTOMER PROFILE
                         .accordion__text {
                             padding-bottom: 0.5rem;
                         }
+
+
+/*------------------------------------*\
+
+$BREAK POINTS
+
+\*------------------------------------*/
+
+
+/* ================================ max-width 1024px ================================ */
+
+@media (max-width: 1024px) {
+
+/*Augmentamos el ancho de la sección Goals */
+.section__goals-container {
+    width: 80%;
+}
+}
+
+
+/* ================================ max-width 768px ================================ */
+
+@media (max-width: 768px) {
+
+/*Augmentamos el ancho de la sección Goals */
+.section__goals-container {
+    width: 100%;
+}
+
+/*Forzamos el height de la imagen divisora al 50vh */
+.img__divider {
+    height: 50vh;
+}
+
+/*Pasamos los acordeones de las propuestas de valor y el perfil del cliente a columna */
+/*Quitamos el padding de los laterales*/
+.customer__wrapper {
+    flex-direction: column;
+    padding: var(--small-sections-spacing) 0 0 0;
+}
+}
