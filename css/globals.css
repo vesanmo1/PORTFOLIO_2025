@@ -126,6 +126,16 @@ li{
     font-weight: 400;
 }
 
+/*
+* ============== SPECIAL STYLES ==============
+*/
+
+
+/*clase para poner en mayúsculas los textos que quiera*/ 
+.uppercase {
+    text-transform: uppercase;
+}
+
 /*------------------------------------*\
 
 $BUTTONS
@@ -277,24 +287,33 @@ $BODY & SHARED STYLES
 
 \*------------------------------------*/
 
+/*color de texto y fondo por defecto*/
 body {
     background-color: var(--primary-color);
     color: var(--secondary-color-100);
 }
 
-.section-initial {
-    padding: calc(var(--header-height) + var(--small-sections-spacing)) var(--sides-section-padding) calc(var(--header-height) + (var(--small-sections-spacing) * 2));
+/*
+* ============== SECTION INTRO ==============
+*/
+
+/*estilos de la "portada" de cada página*/
+.section__intro {    
     width: 100%;
     overflow: hidden;
     border-radius: 0 0 var(--big-border-radius) var(--big-border-radius); 
     box-shadow: 0.75rem 0.75rem 0 var(--shadow-color-transparent);
+    }
     
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;  
-}
+        .intro__content {
+            padding: calc(var(--header-height) + var(--small-sections-spacing)) var(--sides-section-padding) calc(var(--header-height) + (var(--small-sections-spacing) * 2));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;        
+        }
 
+/*estilos del cierre de carpeta común en todas las páginas*/
         .folder-closure-container{
         width: 100%;
         position: relative;
@@ -308,33 +327,52 @@ body {
             transform: translate(-50%, -50%);
         }
 
+/*márgenes de cada apartado*/        
 .section {
     width: 100%;
     height: auto;
     padding: var(--big-sections-spacing) var(--sides-general-padding) 0 var(--sides-general-padding);
 }
 
-.section__title {
-    text-transform: uppercase;
-}
-
-.title__line {
+/*línea horizontal (o subrayado) de los títulos*/
+.underlined {
     background-color: var(--secondary-color-40);
     width: 100%;
     height: 4px;
 }
 
+/*
+* ============== BASIC IMAGE STYLES (CONTAIN & COVER) ==============
+*/
+
+/*ESTILOS DE IMÁGENES BÁSICAS CENTRADAS (los estilos de imagen más concretos y únicos se encuentran en el archivo CSS propio de cada página de la web) 
+
+/*estilos para img que mantiene su aspect-ratio, pero se ajusta a su contenedor*/                                     
 .contain__picture {
 width: 100%;
 height: 100%;
 }
 
-.contain__img {
+    .contain__img {
+        width: 100%;
+        max-height: 100vh;
+        object-fit: contain;
+        object-position: center center;
+    }
+
+/*estilos para img cover, se ajusta a su contenedor recortando la img, pero sin deformarse*/ 
+.cover__picture {
     width: 100%;
-    max-height: 100vh;
-    object-fit: contain;
-    object-position: center center;
+    height: 100%;
+    display: flex;
 }
+
+    .cover__image {
+        width: 100%;
+        height: 100%;               
+        object-fit: cover;          
+        object-position: center;    
+    }
 
 /*------------------------------------*\
 

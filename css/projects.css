@@ -10,7 +10,7 @@ $CUSTOM PROPERTIES
 * ============== SIZES ==============
 */
 
-    --gap-summary-grid:    clamp(0.5rem, 1vw, 1rem); /*padding y gap del grid de la intro*/
+--gap-summary-grid:    clamp(0.5rem, 1vw, 1rem); /*padding y gap del grid de la intro*/
 
 }
 
@@ -60,11 +60,10 @@ $INTRO
 
 \*------------------------------------*/
 
-.intro__project {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 0 0 var(--big-border-radius) var(--big-border-radius); 
-    box-shadow: 0.75rem 0.75rem 0 var(--shadow-color-transparent);
+.logo__project {
+    width: 100vh;
+    object-fit: contain;
 }
+    
 
 
