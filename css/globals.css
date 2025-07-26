@@ -1,10 +1,11 @@
+
+:root{
+
 /*------------------------------------*\
 
 $CUSTOM PROPERTIES
 
 \*------------------------------------*/
-
-:root{
 
 /*
 * ============== SIZES ==============
@@ -74,14 +75,22 @@ $CUSTOM PROPERTIES
 
 /*------------------------------------*\
 
-$TEXT STYLES
+$DEFAULT
 
 \*------------------------------------*/
 
+/*color de texto y fondo por defecto*/
 body {
-     font-family: "Inter Tight", sans-serif;
-    
+    font-family: "Inter Tight", sans-serif;
+    background-color: var(--primary-color);
+    color: var(--secondary-color-100);
 }
+
+/*------------------------------------*\
+
+$TEXT STYLES
+
+\*------------------------------------*/
 
 /*
 * ============== HEADINGS ==============

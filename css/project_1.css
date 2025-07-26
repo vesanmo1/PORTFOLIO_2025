@@ -18,13 +18,9 @@ $OVERVIEW
     padding-top: var(--small-sections-spacing);
 }
 
-    .overview__section--image {
+    .overview__container {
         width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;    
+        height: 100%;
     }
 
         .content__section--sticker{
@@ -35,13 +31,8 @@ $OVERVIEW
             aspect-ratio: 1;
         }
 
-            .sticker__img {
-                object-fit: contain;
-            }
-
         .content__section--summary {
-            color: var(--secondary-color-100);
-            padding: 0 var(--sides-section-padding);
+            padding: 0 var(--sides-section-padding);            
         }
 
             .summary__container {
@@ -69,9 +60,6 @@ $OVERVIEW
                     gap: var(--gap-summary-grid);
                 }
 
-                    .summary__title {
-                        text-transform: uppercase;
-                    }
 
 /*------------------------------------*\
 
@@ -90,19 +78,35 @@ $GOALS
         width: 60%;
     }
 
-.goals__title {
-    padding-top: var(--small-sections-spacing);
+        .goals__title {
+            padding-top: var(--small-sections-spacing);
+        }
+
+        .goals__container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+            .goal {
+                padding-top: 2rem;
+                margin-top:2rem;
+                border-top: 1px solid var(--secondary-color-100);
+            }
+
+/*------------------------------------*\
+
+$IMG DIVIDER
+
+\*------------------------------------*/
+
+.img__divider {
+    padding-top: var(--big-sections-spacing);
 }
 
-.goals__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 2rem;
-}
+/*------------------------------------*\
 
-    .goal {
-        padding-top: 2rem;
-        margin-top:2rem;
-        border-top: 1px solid var(--secondary-color-100);
-    }
+$VALUE PROPOSITION & CUSTOMER PROFILE
+
+\*------------------------------------*/
