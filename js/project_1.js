@@ -89,3 +89,29 @@ variationsButton.forEach ((eachvariationsButton, i) => {
 
     })
 })
+
+
+/**********************************************************
+ * ANIMACIÓN "FLIP CARD"
+ **********************************************************/
+// Animación de tarjeta giratoria al hacer CLICK
+// === [HECHO A PARTIR DE UN VÍDEO VISTO EN YOUTUBE: https://www.youtube.com/watch?v=qkBziDQnboc] === 
+
+const flipButton = document.querySelector ('.flip__button')
+const front = document.querySelector ('.business-card--front')
+const back = document.querySelector ('.business-card--back')
+
+//Cuando hago CLICK sobre el botón se aplica la condición `if` y cuando hago click por segunda vez se aplica la condición `else`
+flipButton.addEventListener(`click`,()=>{
+
+  if (front.style.transform === ``) {   //detecta si aún no se ha aplicado ninguna transformación mediante JavaScript (si hay estilos de rotación aplicados mediante CSS la función seguirá viendo ``)
+    front.style.transform = `rotateY(-180deg)`; //se le aplica a la cara A una rotación de 180°, haciendo que desaparezca del frente.
+    back.style.transform = `rotateY(0deg)`; //se le aplica a la cara B una rotación de 0°, haciendo que aparezca en el frente.
+  }
+    else { //Si la condición del if es falsa (es decir, transform NO está vacío) significa que la tarjeta está “girada” y queremos deshacer la rotación.
+      //Elimina las transformaciones en línea de ambas caras.
+      front.style.transform = ``;
+      back.style.transform = ``;
+      //Al poner la cadena vacía (``) el elemento vuelve a su estado original (el que marque el CSS externo).
+    }
+})

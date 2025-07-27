@@ -222,6 +222,26 @@ $BUTTONS
     letter-spacing: 0.2em;    
 }
 
+/*
+* ============== GENERAL BUTTON ==============
+*/
+.general__btn {
+    background-color: var(--secondary-color-100);
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: var(--pill-style-edge);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: letter-spacing 0.3s;
+}
+
+.general__btn:hover,
+.general__btn:focus-within {
+    letter-spacing: 0.2em;    
+}
+
 /*------------------------------------*\
 
 $ANIMATIONS
