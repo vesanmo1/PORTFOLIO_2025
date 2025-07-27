@@ -443,12 +443,6 @@ $BREAK POINTS
         flex-direction: column;
     }
 
-/*width 100% para los buttons en versión columna*/
-    .general__btn {
-        width: 100%;
-        padding: 1rem 1rem;
-    }
-
 /*Cambiamos la disposición de la "SECTION EXPERTISE" a columna, sobreescribiendo el grid*/
     .expertise__container {
         display: flex;

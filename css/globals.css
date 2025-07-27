@@ -473,4 +473,10 @@ $BREAK POINTS
 .folder-closure {
         width: 13%;
 }
+
+/*width 100% para los buttons en versión columna*/
+.projects__btn {
+    width: 100%;
+    padding: 1rem 1rem;
+}
 }
