@@ -177,13 +177,56 @@ $VALUE PROPOSITION & CUSTOMER PROFILE
                             padding-bottom: 0.5rem;
                         }
 
+/*------------------------------------*\
+
+$COLORS AND TYPOGRAPHY
+
+\*------------------------------------*/
+
+.typography__wrapper {
+    width: 100%;
+    height: auto;
+    padding: var(--small-sections-spacing) var(--sides-section-padding) 0 var(--sides-section-padding);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+    .typography__container {
+        width: 50%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+        .typography {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+        }
+
+            .typography__use,
+            .typography__typo {
+                flex:1;
+            }
+
+            .typography__use {
+                align-self: flex-end; /* Se ajusta a su contenido */
+            }
+
+            .typography__typo {
+                width: 100%;
+                height: 100%;
+            }
+
 
 /*------------------------------------*\
 
 $BREAK POINTS
 
 \*------------------------------------*/
-
 
 /* ================================ max-width 1024px ================================ */
 
@@ -194,7 +237,6 @@ $BREAK POINTS
     width: 80%;
 }
 }
-
 
 /* ================================ max-width 768px ================================ */
 
@@ -215,5 +257,25 @@ $BREAK POINTS
 .customer__wrapper {
     flex-direction: column;
     padding: var(--small-sections-spacing) 0 0 0;
+}
+
+/*Augmentamos el ancho del contenedor de las typo*/
+.typography__container {
+    width: 70%;
+}
+}
+
+/* ================================ max-width 480px ================================ */
+
+@media (max-width: 480px) {
+
+/*Augmentamos el ancho del contenedor de las typo*/
+.typography__container {
+    width: 95%;
+}
+
+/*Augmentamos el ancho del contenedor de las typo*/
+.typography {
+    gap: 1rem;
 }
 }
