@@ -485,6 +485,18 @@ $BREAK POINTS
 .colors__container {
     flex-direction: column;
 }
+
+/*Reducimos la altura de las tabls*/
+.tabs__container {
+    width: 100%;
+    height: 50vh;
+    padding-top: 1rem;
+}
+
+/*La sección del estampado pasa a columna*/
+.print__container {   
+    flex-direction: column;
+}
 }
 
 /* ================================ max-width 480px ================================ */
