@@ -102,7 +102,7 @@ $HEADER
                         }
 
                         .header-nav__link:hover,
-                        .header-nav__link:focus-within {
+                        .header-nav__link:focus-visible {
                             letter-spacing: 0.2em;
                         }
 

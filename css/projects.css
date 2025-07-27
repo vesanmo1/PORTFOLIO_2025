@@ -54,6 +54,17 @@ $HEADER
                                                       
             }
 
+            .header__logo {    
+                fill: var(--secondary-color-100); 
+                transition: all 0.2s ease;                                                      
+            }
+
+            .header__logo-link:hover .header__logo,
+            .header__logo-link:focus-visible .header__logo           {
+                fill: var(--primary-color);    
+            }
+
+
 /*------------------------------------*\
 
 $INTRO

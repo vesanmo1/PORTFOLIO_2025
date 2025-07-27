@@ -163,14 +163,15 @@ $VALUE PROPOSITION & CUSTOMER PROFILE
 
                     .accordion__text-container {
                         padding: 0;
-                        height: 0;
+                        max-height: 0;
                         overflow: hidden;
-                        transition: all 0.4s ease;
+                        transition: max-height 0.4s ease-in-out, padding-top 0.3s ease-in-out;
+                        will-change: max-height; /*propiedad de CSS que le dice al navegador qué propiedades de un elemento probablemente van a cambiar en breve, para que pueda prepararse por adelantado y optimizar el rendimiento.*/
                     }
 
                     .accordion__text-container.active {
                         padding-top: var(--small-padding);
-                        height: auto;
+                        max-height: 1000px;
                     }
 
                         .accordion__text {
