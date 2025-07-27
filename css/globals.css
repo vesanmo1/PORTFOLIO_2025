@@ -326,10 +326,16 @@ $BODY & SHARED STYLES
 \*------------------------------------*/
 
 /*color de texto y fondo por defecto*/
+/*ancho máximo y mínimo para evitar deformaciones en pantallas grandes o pequeñas*/
 body {
     background-color: var(--primary-color);
     color: var(--secondary-color-100);
+
+    max-width: 2500px;
+    min-width: 320px;
+    margin: 0 auto;
 }
+
 
 /*
 * ============== SECTION INTRO ==============
