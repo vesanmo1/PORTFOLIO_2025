@@ -183,10 +183,14 @@ $COLORS AND TYPOGRAPHY
 
 \*------------------------------------*/
 
+/*
+* ============== TYPOGRAPHY ==============
+*/
+
 .typography__wrapper {
     width: 100%;
     height: auto;
-    padding: var(--small-sections-spacing) var(--sides-section-padding) 0 var(--sides-section-padding);
+    padding-top: var(--small-sections-spacing);
 
     display: flex;
     flex-direction: column;
@@ -195,7 +199,7 @@ $COLORS AND TYPOGRAPHY
 
     .typography__container {
         width: 50%;
-
+        padding: 0 var(--sides-section-padding);
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -221,6 +225,148 @@ $COLORS AND TYPOGRAPHY
                 height: 100%;
             }
 
+/*
+* ============== COLORS ==============
+*/
+
+.colors__container{
+    padding-top: var(--big-sections-spacing);
+}
+.colors__container,
+.colors__pair-container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+    .color__container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+/*------------------------------------*\
+
+$COLOR LOGO VARIATIONS
+
+\*------------------------------------*/
+
+.section__color-variations {
+    width: 100%;
+    height: auto;
+}
+
+    .color-variations__text {
+        padding-top: var(--small-sections-spacing);
+    }
+
+        .tabs__container {
+            width: 100%;
+            height: 70vh;
+            padding-top: 1rem;
+        }
+
+            .variations__buttons {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 1rem;
+            }
+
+                .variations__button {
+                    width: 100%;
+                    height: 3rem;
+                    border-radius: 1rem 1rem 0 0;
+                }
+
+                .variations__button--1 {
+                    background-color: var(--cambridge-color-project1);
+                }
+                .variations__button--2 {
+                    background-color: var(--mindaro--color-project1);
+                }
+                .variations__button--3 {
+                    background-color: var(--black-color--80);
+                }
+                .variations__button--4 {
+                    background-color: var(--black-color--20);
+                }
+
+            .variations__container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+
+                .variation {
+                    width: 100%;
+                    height: 100%;
+                    padding: 3%;
+                    border-radius: 0 0 1rem 1rem;
+
+                    position: absolute;
+                    top: 0;
+                    opacity: 0;
+                    transition: all 0.2s ease;
+                }
+
+                .variation--1 {
+                    background-color: var(--cambridge-color-project1);
+                }
+                .variation--2 {
+                    background-color: var(--mindaro--color-project1);
+                }
+                .variation--3 {
+                    background-color: var(--black-color--80);
+                }
+                .variation--4 {
+                    background-color: var(--black-color--20);
+                }
+
+                .variation.active {
+                    opacity: 1;
+                }
+
+                    .variation__conatiner {
+                        width: 100%;
+                        height: 100%;
+                        padding: 7%;
+                        background-color: brown;
+                        border-radius: 1rem;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden; /* Por si acaso */
+                    }
+
+                    .variation__conatiner--1 {
+                        background-color: var(--brunswick-color-project1);
+                    }
+                    .variation__conatiner--2 {
+                        background-color: var(--white-color);
+                    }
+                    .variation__conatiner--3 {
+                        background-color: var(--black-color--100);
+                    }
+                    .variation__conatiner--4 {
+                        background-color: var(--white-color);
+                    }
+
+                        .variation__img{
+                            max-width: 100%;
+                            max-height: 100%;
+                            width: auto;
+                            height: auto;
+                            object-fit: contain;
+                        }
+       
 
 /*------------------------------------*\
 
@@ -263,6 +409,12 @@ $BREAK POINTS
 .typography__container {
     width: 70%;
 }
+
+
+/*Los colores pasan de 1 fila a 2*/
+.colors__container {
+    flex-direction: column;
+}
 }
 
 /* ================================ max-width 480px ================================ */
@@ -271,11 +423,17 @@ $BREAK POINTS
 
 /*Augmentamos el ancho del contenedor de las typo*/
 .typography__container {
-    width: 95%;
+    width: 90%;
+    padding: 0 0;
 }
 
 /*Augmentamos el ancho del contenedor de las typo*/
 .typography {
     gap: 1rem;
+}
+
+/*Los colores pasan de 1 fila a 2*/
+.colors__pair-container {
+    flex-direction: column;
 }
 }

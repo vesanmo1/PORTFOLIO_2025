@@ -64,3 +64,28 @@ moreInfoCustomer.forEach ((eachArrow , j) => {
         }
     })
 })
+
+/**********************************************************
+ * TABS COLOR LOGO VARIATIONS
+ **********************************************************/
+
+const variationsButton  = document.querySelectorAll (`.variations__button`)
+const variation         = document.querySelectorAll (`.variation`)
+
+//Cuando hacemos CLICK en .variations__button:
+    //TODOS .variations__button pierden la clase .active
+    //TODOS los .variation pierden la clase .active
+    //AÑADIMOS .active en el .variations__button que he hecho CLICK
+    //AÑADIMOS .active en el .variation que tenga la misma posición que el .variations__button en el que hemos hecho CLICK
+
+variationsButton.forEach ((eachvariationsButton, i) => {
+    variationsButton[i].addEventListener (`click` , () => {
+        
+        variationsButton.forEach (( eachvariationsButton, i) => {
+            variation[i].classList.remove (`active`)
+        })
+
+        variation[i].classList.add (`active`)
+
+    })
+})
